@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="411px" preserveAspectRatio="none" style="width:304px;height:411px;background:#FFFFFF;" version="1.1" viewBox="0 0 304 411" width="304px" zoomAndPan="magnify"><defs/><g><!--MD5=[9c14d2b3f5a3d1b21c4328ffa36dd063]
+cluster adapters--><g id="cluster_adapters"><path d="M101.5,69 L172.5,69 A3.75,3.75 0 0 1 175,71.5 L182,91.2969 L294.5,91.2969 A2.5,2.5 0 0 1 297,93.7969 L297,230.5 A2.5,2.5 0 0 1 294.5,233 L101.5,233 A2.5,2.5 0 0 1 99,230.5 L99,71.5 A2.5,2.5 0 0 1 101.5,69 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="99" x2="182" y1="91.2969" y2="91.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="70" x="103" y="83.9951">adapters</text></g><!--MD5=[7245d11403d6b52e5b0931708ed49d16]
+cluster outbound--><g id="cluster_outbound"><path d="M125.5,112 L202.5,112 A3.75,3.75 0 0 1 205,114.5 L212,134.2969 L270.5,134.2969 A2.5,2.5 0 0 1 273,136.7969 L273,206.5 A2.5,2.5 0 0 1 270.5,209 L125.5,209 A2.5,2.5 0 0 1 123,206.5 L123,114.5 A2.5,2.5 0 0 1 125.5,112 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="123" x2="212" y1="134.2969" y2="134.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="76" x="127" y="126.9951">outbound</text></g><!--MD5=[6fe9f9327c8844cafb7834fa3f008eb4]
+entity store_lmdb--><g id="elem_store_lmdb"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="117" x="139.5" y="147"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="236.5" y="152"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="234.5" y="154"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="234.5" y="158"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="154.5" y="179.9951">store_lmdb</text></g><!--MD5=[0d482ad21d5c7c11aa976e45da5ecfe6]
+entity core--><g id="elem_core"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="71" x="157.5" y="359"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="208.5" y="364"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="206.5" y="366"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="206.5" y="370"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="172.5" y="391.9951">core</text></g><!--MD5=[21529e551fadf2f21c3166c9ac8ebc2f]
+entity store_traits--><g id="elem_store_traits"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="117" x="134.5" y="253"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="231.5" y="258"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="229.5" y="260"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="229.5" y="264"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="149.5" y="285.9951">store_traits</text></g><!--MD5=[43d0eb486ab8276ac19d3a17de2ccef6]
+entity ledger--><g id="elem_ledger"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="11" y="253"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="75" y="258"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="73" y="260"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="73" y="264"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="26" y="285.9951">ledger</text></g><!--MD5=[0b70d51bdd028022f5101c089cfdd98e]
+entity node--><g id="elem_node"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76" x="7" y="147"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="63" y="152"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="61" y="154"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="61" y="158"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="22" y="179.9951">node</text></g><!--MD5=[4f2b514e7ac4bedd19b604b42b4fc64b]
+entity ffi--><g id="elem_ffi"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="51" x="95.5" y="7"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="126.5" y="12"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="124.5" y="14"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="124.5" y="18"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="11" x="110.5" y="39.9951">ffi</text></g><!--MD5=[719c1a4befc0f1b5383794d9fb44adab]
+link store_traits to core--><g id="link_store_traits_core"><path d="M193,299.06 C193,315.05 193,336.78 193,353.84 " fill="none" id="store_traits-to-core" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="193,358.98,197,349.98,193,353.98,189,349.98,193,358.98" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[59dbf2f30d8eaacc5de754353c4e52ad]
+link store_lmdb to store_traits--><g id="link_store_lmdb_store_traits"><path d="M196.94,193.06 C196.17,209.05 195.13,230.78 194.31,247.84 " fill="none" id="store_lmdb-to-store_traits" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="194.06,252.98,198.4919,244.1847,194.3026,247.9859,190.5013,243.7965,194.06,252.98" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b85ef1146c33a1902a479e61c1d5b6e8]
+link node to ledger--><g id="link_node_ledger"><path d="M46.7,193.06 C47.93,209.05 49.6,230.78 50.91,247.84 " fill="none" id="node-to-ledger" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="51.31,252.98,54.6039,243.6983,50.9243,247.9949,46.6277,244.3153,51.31,252.98" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6bfcdc9c92d38ec850f54e99111632a8]
+link ledger to store_traits--><g id="link_ledger_store_traits"><path d="M95.11,276 C106.49,276 117.88,276 129.26,276 " fill="none" id="ledger-to-store_traits" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="134.5,276,125.5,272,129.5,276,125.5,280,134.5,276" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4d55f99107280b8dc3ce9876a510a30c]
+link ffi to store_lmdb--><g id="link_ffi_store_lmdb"><path d="M133.37,53.17 C146.9,77.42 168.57,116.26 183.04,142.2 " fill="none" id="ffi-to-store_lmdb" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="185.66,146.88,184.7614,137.0722,183.2209,142.5153,177.7778,140.9748,185.66,146.88" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[df65affd565ce4b3f9293afb72947d18]
+link ffi to node--><g id="link_ffi_node"><path d="M108.79,53.17 C95.44,77.42 74.04,116.26 59.76,142.2 " fill="none" id="ffi-to-node" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="57.18,146.88,65.0244,140.9247,59.5912,142.4998,58.0161,137.0667,57.18,146.88" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0ca5bdc7d148c92e2dac420ed3247645]
+@startuml "Split crates"
+
+[core]
+[store_traits]
+[ledger]
+[node]
+[ffi]
+
+folder "adapters"{
+    folder "outbound"{
+            [store_lmdb]
+    }
+}
+
+[store_traits] - -> [core]
+[store_lmdb] - -> [store_traits]
+[node] - -> [ledger]
+[ledger] -> [store_traits]
+[ffi] - -> [store_lmdb]
+[ffi] - -> [node]
+
+@enduml
+
+PlantUML version 1.2022.13(Sat Nov 19 13:22:17 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
