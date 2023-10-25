@@ -36,9 +36,9 @@ The ported status increased by **1.4 percentage points** to 31.8%. This increase
 
 This month only a small amount of code was ported to Rust, because most of the time was spent on improving the code quality. There were still a few ledger unit tests in C++ and these were ported to Rust and split into smaller and more focused tests. The tests were a bit too slow for my taste, so I replaced the proof of work implementation by a stub and that increased test speed by more than 3x. After that, the Rust codebase was **split into several reusable modules**:
 
-![RsNano Crates]/blog/rsnano_crates.svg
+![RsNano Crates](/blog/rsnano_crates.svg)
 
-You can read more about this split in the article ["How to open the Nano ledger with Rust"](/blog/post/ledger-example/), which also contains a code example. The general idea with these modules is that parts of the nano node can be reused by the community to develop their own tools.
+You can read more about this split in the article ["How to open the Nano ledger with Rust"](/blog/post/ledger-example), which also contains a code example. The general idea with these modules is that parts of the nano node can be reused by the community to develop their own tools.
 
 Once the modules were separated out, the rest of December was invested in **improving the code for validating, inserting, and rolling back blocks** in the ledger. The code that validates new blocks and inserts them into the ledger is one of the most important parts of Nano. Unfortunately, this part has grown over the years and has become cluttered and complex. However, this part better be simple and clean, because it is the heart of the ledger. So I put **40+ hours into cleaning up** that piece of code - and it was worth it. The cleanup happened in many tiny and simple steps. Now that code doesn't look like the original at all. It is clean, focused and a lot simpler to understand. Further down in this article I go into the details of the new design.
 
@@ -159,7 +159,7 @@ I did not design the following solution up front. The design has emerged through
 Inspired by the new article
 [Testing Without Mocks](https://www.jamesshore.com/v2/projects/testing-without-mocks/testing-without-mocks) by James Shore, I made sure to strictly separate infrastructure on logic:
 
-![Block Insertion]/blog/block_insertion.svg
+![Block Insertion](/blog/block_insertion.svg)
 
 As you can see, the LedgerProcessor was split into two parts:
 
@@ -350,7 +350,7 @@ void state_block (nano::state_block const & block_a) override
 
 In the same way that the `ledger_processor` was refactored, the `rollback_visitor` was also split:
 
-![Block Rollback]/blog/block_rollback.svg
+![Block Rollback](/blog/block_rollback.svg)
 
 There are now two phases: the `RollbackPlanner` creates `RollbackInstructions` which contain all the data needed to perform the rollback. The `RollbackInstructionsExecutor` then executes these instructions. This again results in a strict separation of logic and infrastructure. All code duplications were removed.
 

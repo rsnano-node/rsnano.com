@@ -6,7 +6,7 @@ draft: false
 
 Over the last few weeks I've been working on splitting RsNano into reusable libraries.The result currently looks like this:
 
-![RsNano Crates]/blog/rsnano_crates.svg
+![RsNano Crates](/blog/rsnano_crates.svg)
 
 This breakdown is still too simplistic and will be extended in the course of time. However, the extracted crates already allow working with the nano ledger!
 
