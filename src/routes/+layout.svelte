@@ -45,7 +45,7 @@
 
 <main class="w-full h-full min-h-screen flex flex-col prose max-w-none">
 	<Navbar />
-	<div class="grow">
+	<div class="grow isolate">
 		<slot />
 	</div>
 	<Footer />
