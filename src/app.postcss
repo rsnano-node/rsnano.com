@@ -17,3 +17,16 @@
 		@apply font-montserrat h-screen w-screen scroll-smooth;
 	}
 }
+
+:root .prose {
+	/* remove opacity from prose body. See https://github.com/saadeghi/daisyui/issues/735#issuecomment-1105067572 */
+	--tw-prose-body: hsl(var(--bc));
+}
+
+@layer components {
+	.mockup-code {
+		pre {
+			@apply relative before:absolute before:inset-0 pl-12;
+		}
+	}
+}
