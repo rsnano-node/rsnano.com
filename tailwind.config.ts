@@ -1,5 +1,5 @@
-const daisyui = require('daisyui');
-const typography = require('@tailwindcss/typography');
+import daisyui from 'daisyui';
+import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
@@ -9,10 +9,12 @@ const config = {
 		extend: {
 			fontFamily: {
 				montserrat: ['Montserrat', 'sans-serif']
+			},
+			colors: {
+				'nano-blue': '#209CE9'
 			}
 		}
 	},
-
 	plugins: [typography, daisyui]
 };
 
