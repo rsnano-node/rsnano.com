@@ -12,7 +12,7 @@
 				<span class="my-2">A Rust port of Nano</span>
 			</span>
 
-			<ExternalLink href="https://github.com/simpago/rsnano-node">Github</ExternalLink>
+			<ExternalLink href="https://github.com/simpago/rsnano-node" showIcon>Github</ExternalLink>
 			<a href="/legal" class="link link-hover">Legal</a>
 		</aside>
 		<nav>
