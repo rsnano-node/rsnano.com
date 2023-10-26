@@ -3,6 +3,7 @@
 	import { twMerge } from 'tailwind-merge';
 
 	export let href: string;
+	export let showIcon = true;
 
 	let className: string | undefined = undefined;
 
@@ -13,7 +14,9 @@
 	<a {href} target="_blank" class={twMerge('link link-hover peer', className)}>
 		<slot />
 	</a>
-	<OpenNewWindowIcon
-		class="inline ml-1 w-3 h-auto transition-opacity opacity-0 peer-hover:opacity-100"
-	/>
+	{#if showIcon}
+		<OpenNewWindowIcon
+			class="inline ml-1 w-3 h-auto transition-opacity opacity-0 peer-hover:opacity-100"
+		/>
+	{/if}
 </span>
