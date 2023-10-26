@@ -1,14 +1,9 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { Section } from '$lib/Section';
-	import {
-		Chart,
-		type ChartDataset,
-		type DefaultDataPoint,
-		type ScriptableContext
-	} from 'chart.js/auto';
-	import 'chartjs-adapter-date-fns';
 	import { themeData } from '$lib/stores';
+	import { Chart } from 'chart.js/auto';
+	import 'chartjs-adapter-date-fns';
+	import { onMount } from 'svelte';
 
 	const data = {
 		'2022-03': 9.05,
@@ -39,7 +34,7 @@
 		const computedStyle = getComputedStyle(document.body);
 		const backgroundColor = computedStyle.getPropertyValue('--b1');
 		const primaryColor = computedStyle.getPropertyValue('--p');
-		const primaryContentColor = computedStyle.getPropertyValue('--pc');
+		const baseContentColor = computedStyle.getPropertyValue('--bc');
 
 		chart.data.datasets = [
 			{
@@ -50,8 +45,8 @@
 				backgroundColor: `hsl(${primaryColor} / 10%)`,
 				borderColor: `hsl(${primaryColor} / 80%)`,
 				pointBackgroundColor: `hsl(${backgroundColor})`,
-				pointBorderColor: `hsl(${primaryContentColor} / 50%)`,
-				pointHoverBorderColor: `hsl(${primaryContentColor} / 100%)`,
+				pointBorderColor: `hsl(${baseContentColor} / 25%)`,
+				pointHoverBorderColor: `hsl(${baseContentColor} / 50%)`,
 				pointBorderWidth: 2,
 				pointHoverBorderWidth: 2,
 				pointStyle: 'circle',
