@@ -9,8 +9,7 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			precompress: true,
-			isr: true
+			precompress: true
 		}),
 		prerender: {
 			crawl: true
