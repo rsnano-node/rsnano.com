@@ -20,24 +20,28 @@
 			<ExternalLink
 				href="https://www.youtube.com/@gschauwecker"
 				class="inline-flex items-center gap-1"
+				showIcon
 			>
 				<YouTubeIcon class="inline mr-1 w-4" /> YouTube
 			</ExternalLink>
 			<ExternalLink
 				href="https://www.twitch.tv/gschauwecker"
 				class="inline-flex items-center gap-1"
+				showIcon
 			>
 				<TvIcon class="inline mr-1 w-4" /> Twitch
 			</ExternalLink>
 			<ExternalLink
 				href="https://discord.gg/kBwvAyxEWE"
-				class="link link-hover inline-flex items-center gap-1"
+				class="inline-flex items-center gap-1"
+				showIcon
 			>
 				<DiscordIcon class="inline mr-1 w-4" /> Discord
 			</ExternalLink>
 			<ExternalLink
 				href="https://twitter.com/gschauwecker"
-				class="link link-hover inline-flex items-center gap-1"
+				class="inline-flex items-center gap-1"
+				showIcon
 			>
 				<TwitterIcon class="inline mr-1 w-4" /> Twitter
 			</ExternalLink>
@@ -45,12 +49,11 @@
 		<nav>
 			<header class="footer-title">Other</header>
 			<a href="/blog" class="link link-hover">Blog</a>
-			<ExternalLink href="https://monitor.rsnano.com" class="link link-hover">
-				Node Monitor
-			</ExternalLink>
+			<ExternalLink href="https://monitor.rsnano.com" showIcon>Node Monitor</ExternalLink>
 		</nav>
 	</footer>
 	<p class="text-center text-sm mt-8 mb-0">
-		Site build with ❤️ by <a target="_blank" href="https://github.com/luxbe">luxbe</a>
+		Site build with ❤️ by <ExternalLink href="https://github.com/luxbe" showIcon>luxbe</ExternalLink
+		>
 	</p>
 </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { ExternalLink } from '$lib/ExternalLink';
 	import { LogoText } from '$lib/Icon';
 	import { ThemeToggle } from '$lib/ThemeToggle';
 	import { GitHubIcon } from '@indaco/svelte-iconoir';
@@ -30,13 +31,9 @@
 		<a href="/blog" class="btn btn-ghost font-medium">Blog</a>
 
 		<ThemeToggle />
-		<a
-			href="https://github.com/simpago/rsnano-node"
-			target="_blank"
-			class="btn btn-ghost btn-square"
-		>
+		<ExternalLink href="https://github.com/simpago/rsnano-node" class="btn btn-ghost btn-square">
 			<GitHubIcon />
-		</a>
+		</ExternalLink>
 	</div>
 </div>
 

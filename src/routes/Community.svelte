@@ -21,13 +21,18 @@
 	<p>
 		<YouTubeIcon class="inline mr-2" />
 		<span
-			>I do live coding on <a href="https://www.youtube.com/@gschauwecker">YouTube</a> and
-			<a href="https://www.twitch.tv/gschauwecker">Twitch</a> once a week</span
+			>I do live coding on <ExternalLink href="https://www.youtube.com/@gschauwecker">
+				YouTube
+			</ExternalLink> and
+			<ExternalLink href="https://www.twitch.tv/gschauwecker">Twitch</ExternalLink>
+			once a week</span
 		>
 	</p>
 	<p>
 		<DiscordIcon class="inline mr-2" />
-		<span>Join our <a href="https://discord.gg/kBwvAyxEWE">Discord server</a> and chat with us</span
+		<span
+			>Join our <ExternalLink href="https://discord.gg/kBwvAyxEWE">Discord server</ExternalLink> and
+			chat with us</span
 		>
 	</p>
 	<p>
@@ -36,13 +41,17 @@
 	</p>
 	<p>
 		<TwitterIcon class="inline mr-2" />
-		<span>Check out my <a href="https://twitter.com/gschauwecker">Twitter</a> for updates</span>
+		<span
+			>Check out my
+			<ExternalLink href="https://twitter.com/gschauwecker">Twitter</ExternalLink> for updates</span
+		>
 	</p>
 	<p>
 		<GitHubIcon class="inline mr-2" />
 		<span
-			>Check out the source code on <a href="https://github.com/simpago/rsnano-node">GitHub</a
-			></span
+			>Check out the source code on <ExternalLink href="https://github.com/simpago/rsnano-node">
+				GitHub
+			</ExternalLink></span
 		>
 	</p>
 	<p>
@@ -61,8 +70,9 @@
 <Section id="contribute" title="Contribute">
 	<p>
 		We are happy to accept your pull requests! You would like to contribute, but you don't know
-		where to start? Join <a href="https://discord.gg/kBwvAyxEWE">our Discord server</a> and we'll find
-		something.
+		where to start? Join <ExternalLink href="https://discord.gg/kBwvAyxEWE">
+			our Discord server
+		</ExternalLink> and we'll find something.
 	</p>
 	<p>
 		A good starting point to get an understanding of the code base is the official Nano Core
@@ -72,15 +82,16 @@
 <Section id="install" title="Install">
 	<p>
 		Check out our
-		<a href="https://github.com/simpago/rsnano-node#installation">installation guide on GitHub</a> to
-		get the RsNano node up and running!
+		<ExternalLink href="https://github.com/simpago/rsnano-node#installation">
+			installation guide on GitHub
+		</ExternalLink> to get the RsNano node up and running!
 	</p>
 </Section>
 <Section id="donate" title="Donate">
 	<p>Would you like to support our work? Please donate to this address:</p>
 	<Donation class="w-64 h-auto mx-auto" />
 	<p class="text-center">
-		<ExternalLink href="nano:{nanoDonationAddress}">
+		<ExternalLink href="nano:{nanoDonationAddress}" showIcon>
 			<NanoAddress address={nanoDonationAddress} />
 		</ExternalLink>
 	</p>
@@ -92,7 +103,7 @@
 	</p>
 	<Representative class="w-64 h-auto mx-auto" />
 	<p class="text-center">
-		<ExternalLink href="nanorep:{nanoRepresentativeAddress}">
+		<ExternalLink href="nanorep:{nanoRepresentativeAddress}" showIcon>
 			<NanoAddress address={nanoRepresentativeAddress} />
 		</ExternalLink>
 	</p>
@@ -101,6 +112,7 @@
 		point in the future.
 	</p>
 	<p>
-		Check out the <a href="https://monitor.rsnano.com/">Node Monitor</a> for further information.
+		Check out the <ExternalLink href="https://monitor.rsnano.com/">Node Monitor</ExternalLink> for further
+		information.
 	</p>
 </Section>
