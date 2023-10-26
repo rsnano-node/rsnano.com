@@ -1,8 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Section from './Section.svelte';
-	import { Chart, type ScriptableContext } from 'chart.js/auto';
+	import Section from '../../routes/Section.svelte';
+	import {
+		Chart,
+		type ChartDataset,
+		type DefaultDataPoint,
+		type ScriptableContext
+	} from 'chart.js/auto';
 	import 'chartjs-adapter-date-fns';
+	import { themeData } from '$lib/stores';
 
 	const data = {
 		'2022-03': 9.05,
@@ -27,28 +33,42 @@
 	};
 
 	let canvas: HTMLCanvasElement;
+	let chart: Chart;
+
+	const updateDataset = () => {
+		const computedStyle = getComputedStyle(document.body);
+		const backgroundColor = computedStyle.getPropertyValue('--b1');
+		const primaryColor = computedStyle.getPropertyValue('--p');
+		const primaryContentColor = computedStyle.getPropertyValue('--pc');
+
+		chart.data.datasets = [
+			{
+				label: 'Rust',
+				data: Object.values(data),
+				yAxisID: 'y',
+				fill: true,
+				backgroundColor: `hsl(${primaryColor} / 10%)`,
+				borderColor: `hsl(${primaryColor} / 80%)`,
+				pointBackgroundColor: `hsl(${backgroundColor})`,
+				pointBorderColor: `hsl(${primaryContentColor} / 50%)`,
+				pointHoverBorderColor: `hsl(${primaryContentColor} / 100%)`,
+				pointBorderWidth: 2,
+				pointHoverBorderWidth: 2,
+				pointStyle: 'circle',
+				pointRadius: 6,
+				pointHoverRadius: 8
+			}
+		];
+
+		chart.update();
+	};
 
 	onMount(() => {
-		new Chart(canvas, {
+		chart = new Chart(canvas, {
 			type: 'line',
 			data: {
 				labels: Object.keys(data).map((d) => new Date(d)),
-				datasets: [
-					{
-						label: 'Rust',
-						data: Object.values(data),
-						yAxisID: 'y',
-						fill: true,
-						backgroundColor: '#209CE910',
-						borderColor: '#209CE980',
-						pointBackgroundColor: 'rgb(29, 35, 42)',
-						pointBorderColor: '#FFFFFF',
-						pointBorderWidth: 2,
-						pointStyle: 'circle',
-						pointRadius: 6,
-						pointHoverRadius: 8
-					}
-				]
+				datasets: []
 			},
 			options: {
 				animation: {
@@ -101,6 +121,11 @@
 				}
 			}
 		});
+
+		updateDataset();
+
+		// recalculate colors when theme changes
+		themeData.subscribe(updateDataset);
 	});
 </script>
 
@@ -110,7 +135,7 @@
 	<div class="w-full max-h-96 flex gap-16 items-center">
 		<div class="shrink-0">
 			<h1 class="text-6xl my-0">
-				<span class="text-nano-blue">{Object.values(data).at(-1)}</span> %
+				<span class="text-primary">{Object.values(data).at(-1)}</span> %
 			</h1>
 			<p class="mt-2">of the codebase is currently written in Rust.</p>
 		</div>
