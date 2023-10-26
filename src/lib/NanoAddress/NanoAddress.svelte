@@ -14,8 +14,8 @@
 	$: suffix = address.substring(address.length - SUFFIX_LENGTH);
 </script>
 
-<span class={twMerge('inline-flex font-medium', className)}>
+<p class={twMerge('inline-flex font-medium m-0 [text-decoration:inherit]', className)}>
 	<span class="text-primary">{prefix}</span>
 	{main}
 	<span class="text-primary">{suffix}</span>
-</span>
+</p>

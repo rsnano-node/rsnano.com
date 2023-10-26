@@ -10,7 +10,8 @@
 	import Section from './Section.svelte';
 	import Representative from '$lib/Icon/Representative.svelte';
 	import Donation from '$lib/Icon/Donation.svelte';
-	import NanoAddress from '$lib/NanoAddress/NanoAddress.svelte';
+	import { NanoAddress } from '$lib/NanoAddress';
+	import ExternalLink from '$lib/ExternalLink/ExternalLink.svelte';
 
 	const nanoDonationAddress = 'nano_1iawmcfwmmdyr7xmnordt71gpnhnao8rsk4nywq5khtmedocaj6bafk4fb8h';
 	const nanoRepresentativeAddress =
@@ -80,9 +81,9 @@
 	<p>Would you like to support our work? Please donate to this address:</p>
 	<Donation class="w-64 h-auto mx-auto" />
 	<p class="text-center">
-		<a href="nano:{nanoDonationAddress}">
-			<NanoAddress address={nanoDonationAddress} class="link link-hover" />
-		</a>
+		<ExternalLink href="nano:{nanoDonationAddress}">
+			<NanoAddress address={nanoDonationAddress} />
+		</ExternalLink>
 	</p>
 </Section>
 <Section id="representative" title="Principal Representative">
@@ -92,7 +93,9 @@
 	</p>
 	<Representative class="w-64 h-auto mx-auto" />
 	<p class="text-center">
-		<NanoAddress address={nanoRepresentativeAddress} />
+		<ExternalLink href="nanorep:{nanoRepresentativeAddress}">
+			<NanoAddress address={nanoRepresentativeAddress} />
+		</ExternalLink>
 	</p>
 	<p>
 		Our representative currently runs the official nano-node. We will switch to RsNano-node at some
