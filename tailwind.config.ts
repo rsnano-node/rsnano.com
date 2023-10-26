@@ -26,9 +26,9 @@ const config = {
 				dark: {
 					...themes['[data-theme=dark]'],
 					'primary': '#209CE9',
-					'base-100': '#031017',
-					'base-200': '#02080c',
-					'base-300': '#010305'
+					'base-100': '#051723',
+					'base-200': '#031017',
+					'base-300': '#02080c'
 				}
 			}
 		]
