@@ -11,7 +11,7 @@
 <section class="relative h-screen w-full">
 	<div class="w-full h-full grid place-items-center">
 		<div class="text-center">
-			<h1 class="text-9xl mb-0">Rs<span class="text-nano-blue">Nano</span> Blog</h1>
+			<h1 class="text-9xl mb-0">Rs<span class="text-primary">Nano</span> Blog</h1>
 			<h2 class="text-4xl mt-8">Latest Development Updates</h2>
 		</div>
 	</div>

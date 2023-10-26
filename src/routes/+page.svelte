@@ -4,7 +4,7 @@
 	import About from './About.svelte';
 	import Community from './Community.svelte';
 	import Goals from './Goals.svelte';
-	import Status from './Status.svelte';
+	import Status from '../lib/Status/StatusGraph.svelte';
 	import WhyRust from './WhyRust.svelte';
 </script>
 
@@ -15,9 +15,9 @@
 <section class="relative h-screen w-full">
 	<div class="w-full h-full grid place-items-center">
 		<div class="text-center">
-			<h1 class="text-9xl mb-0">Rs<span class="text-nano-blue">Nano</span></h1>
+			<h1 class="text-9xl mb-0">Rs<span class="text-primary">Nano</span></h1>
 			<h2 class="text-4xl mt-8">
-				<span>A Rust port of <span class="text-nano-blue">Nano</span></span>
+				<span>A Rust port of <span class="text-primary">Nano</span></span>
 				<br />
 				<span> the feeless and digital currency </span>
 			</h2>

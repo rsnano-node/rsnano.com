@@ -15,7 +15,7 @@
 </script>
 
 <span class={twMerge('inline-flex font-medium', className)}>
-	<span class="text-nano-blue">{prefix}</span>
+	<span class="text-primary">{prefix}</span>
 	{main}
-	<span class="text-nano-blue">{suffix}</span>
+	<span class="text-primary">{suffix}</span>
 </span>

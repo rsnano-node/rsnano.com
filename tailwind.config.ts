@@ -1,5 +1,6 @@
 import daisyui from 'daisyui';
 import typography from '@tailwindcss/typography';
+import themes from 'daisyui/src/theming/themes';
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
@@ -9,11 +10,22 @@ const config = {
 		extend: {
 			fontFamily: {
 				montserrat: ['Montserrat', 'sans-serif']
-			},
-			colors: {
-				'nano-blue': '#209CE9'
 			}
 		}
+	},
+	daisyui: {
+		themes: [
+			{
+				light: {
+					...themes['[data-theme=light]'],
+					primary: '#209CE9'
+				},
+				dark: {
+					...themes['[data-theme=dark]'],
+					primary: '#209CE9'
+				}
+			}
+		]
 	},
 	plugins: [typography, daisyui]
 };
