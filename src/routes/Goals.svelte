@@ -8,21 +8,21 @@
 	<h1>Goals</h1>
 	<div class="grid grid-cols-3 gap-16">
 		<Card title="100% Rust">
-			<RustIcon slot="icon" class="w-32" />
+			<RustIcon slot="icon" class="w-32 h-32" />
 			<p>
 				Currently, about 40% of the code base is ported. Our goal is to port 100% of the C++ code to
 				Rust.
 			</p>
 		</Card>
 		<Card title="Well tested">
-			<TestTubeIcon slot="icon" size={128} stroke-width="2" />
+			<TestTubeIcon slot="icon" size="8rem" stroke-width="2" />
 			<p>
 				We want to expand the test suite, make it faster and completely stable. This will enable us
 				to catch bugs early and improve stability of the Nano Network.
 			</p>
 		</Card>
 		<Card title="Architecture">
-			<AppleShortcutsIcon slot="icon" size={128} stroke-width="2" />
+			<AppleShortcutsIcon slot="icon" size="8rem" stroke-width="2" />
 			<p>
 				We want to improve the Software Architecture and align it with modern Rust standards. This
 				will enable us to add improvements more easily.
