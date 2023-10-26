@@ -28,12 +28,10 @@
 	</div>
 	<LogoBackground />
 </section>
-<main class="w-full bg-base-100 min-h-screen py-16">
-	<div class="prose max-w-6xl mx-auto flex flex-col gap-16">
-		<About />
-		<WhyRust />
-		<StatusGraph />
-		<Goals />
-		<Community />
-	</div>
+<main class="prose max-w-6xl mx-auto flex flex-col gap-16 py-16">
+	<About />
+	<WhyRust />
+	<StatusGraph />
+	<Goals />
+	<Community />
 </main>

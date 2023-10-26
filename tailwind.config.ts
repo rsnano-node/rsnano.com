@@ -18,11 +18,17 @@ const config = {
 			{
 				light: {
 					...themes['[data-theme=light]'],
-					primary: '#209CE9'
+					'primary': '#209CE9',
+					'base-100': '#f4fafe',
+					'base-200': '#eff4f7',
+					'base-300': '#dee8ef'
 				},
 				dark: {
 					...themes['[data-theme=dark]'],
-					primary: '#209CE9'
+					'primary': '#209CE9',
+					'base-100': '#031017',
+					'base-200': '#02080c',
+					'base-300': '#010305'
 				}
 			}
 		]

@@ -43,7 +43,7 @@
 	});
 </script>
 
-<main class="w-full h-full min-h-screen flex flex-col prose max-w-none">
+<main class="w-full min-h-screen bg-base-100 flex flex-col prose max-w-none">
 	<Navbar />
 	<div class="grow isolate">
 		<slot />
