@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Logo from '$lib/Icon/Logo.svelte';
+	import { Logo } from '$lib/Icon';
 </script>
 
 <div class="absolute inset-0 blur-sm -z-[1] flex items-start justify-center">

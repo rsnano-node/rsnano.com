@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Section from '../../routes/Section.svelte';
+	import { Section } from '$lib/Section';
 	import {
 		Chart,
 		type ChartDataset,

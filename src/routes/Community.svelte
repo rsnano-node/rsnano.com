@@ -1,17 +1,16 @@
 <script lang="ts">
+	import { ExternalLink } from '$lib/ExternalLink';
+	import { Donation } from '$lib/Icon';
+	import { Representative } from '$lib/Icon';
+	import { NanoAddress } from '$lib/NanoAddress';
 	import {
 		DiscordIcon,
-		FxIcon,
 		GitHubIcon,
 		PostIcon,
 		TwitterIcon,
 		YouTubeIcon
 	} from '@indaco/svelte-iconoir';
-	import Section from './Section.svelte';
-	import Representative from '$lib/Icon/Representative.svelte';
-	import Donation from '$lib/Icon/Donation.svelte';
-	import { NanoAddress } from '$lib/NanoAddress';
-	import ExternalLink from '$lib/ExternalLink/ExternalLink.svelte';
+	import { Section } from '$lib/Section';
 
 	const nanoDonationAddress = 'nano_1iawmcfwmmdyr7xmnordt71gpnhnao8rsk4nywq5khtmedocaj6bafk4fb8h';
 	const nanoRepresentativeAddress =

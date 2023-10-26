@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Card from '$lib/Card/Card.svelte';
+	import { Card } from '$lib/Card';
 	import { FlashIcon } from '@indaco/svelte-iconoir/flash';
 	import { StatUpIcon } from '@indaco/svelte-iconoir/stat-up';
 	import { TowerCheckIcon } from '@indaco/svelte-iconoir/tower-check';
 
-	import Section from './Section.svelte';
+	import { Section } from '$lib/Section';
 </script>
 
 <Section id="why-rust" title="Why Rust?">

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Logo from '$lib/Icon/Logo.svelte';
+	import { Logo } from '$lib/Icon';
 </script>
 
 <div class="bg-base-300 aspect-video w-full p-4">

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ExternalLink from '$lib/ExternalLink/ExternalLink.svelte';
+	import { ExternalLink } from '$lib/ExternalLink';
 	import { LogoText } from '$lib/Icon';
 	import { DiscordIcon, TvIcon, TwitterIcon, YouTubeIcon } from '@indaco/svelte-iconoir';
 </script>
