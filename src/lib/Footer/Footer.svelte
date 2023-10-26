@@ -1,50 +1,56 @@
 <script lang="ts">
+	import ExternalLink from '$lib/ExternalLink/ExternalLink.svelte';
 	import { LogoText } from '$lib/Icon';
 	import { DiscordIcon, TvIcon, TwitterIcon, YouTubeIcon } from '@indaco/svelte-iconoir';
 </script>
 
-<div class="bg-base-200">
-	<footer class="footer p-10 prose max-w-6xl mx-auto">
+<div class="bg-base-200 py-8">
+	<footer class="footer prose max-w-6xl mx-auto">
 		<aside>
 			<span class="flex flex-col">
 				<LogoText />
 				<span class="my-2">A Rust port of Nano</span>
 			</span>
 
-			<a href="https://github.com/simpago/rsnano-node" class="link link-hover">Github</a>
+			<ExternalLink href="https://github.com/simpago/rsnano-node">Github</ExternalLink>
 			<a href="/legal" class="link link-hover">Legal</a>
 		</aside>
 		<nav>
 			<header class="footer-title">Community</header>
-			<a
+			<ExternalLink
 				href="https://www.youtube.com/@gschauwecker"
-				class="link link-hover inline-flex items-center gap-1"
+				class="inline-flex items-center gap-1"
 			>
 				<YouTubeIcon class="inline mr-1 w-4" /> YouTube
-			</a>
-			<a
+			</ExternalLink>
+			<ExternalLink
 				href="https://www.twitch.tv/gschauwecker"
-				class="link link-hover inline-flex items-center gap-1"
+				class="inline-flex items-center gap-1"
 			>
 				<TvIcon class="inline mr-1 w-4" /> Twitch
-			</a>
-			<a
+			</ExternalLink>
+			<ExternalLink
 				href="https://discord.gg/kBwvAyxEWE"
 				class="link link-hover inline-flex items-center gap-1"
 			>
 				<DiscordIcon class="inline mr-1 w-4" /> Discord
-			</a>
-			<a
+			</ExternalLink>
+			<ExternalLink
 				href="https://twitter.com/gschauwecker"
 				class="link link-hover inline-flex items-center gap-1"
 			>
 				<TwitterIcon class="inline mr-1 w-4" /> Twitter
-			</a>
+			</ExternalLink>
 		</nav>
 		<nav>
 			<header class="footer-title">Other</header>
 			<a href="/blog" class="link link-hover">Blog</a>
-			<a href="https://monitor.rsnano.com" class="link link-hover">Node Monitor</a>
+			<ExternalLink href="https://monitor.rsnano.com" class="link link-hover">
+				Node Monitor
+			</ExternalLink>
 		</nav>
 	</footer>
+	<p class="text-center text-sm mt-8 mb-0">
+		Site build with ❤️ by <a target="_blank" href="https://github.com/luxbe">luxbe</a>
+	</p>
 </div>
