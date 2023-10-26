@@ -53,7 +53,7 @@
 		</nav>
 	</footer>
 	<p class="text-center text-sm mt-8 mb-0">
-		Site build with ❤️ by <ExternalLink href="https://github.com/luxbe" showIcon>luxbe</ExternalLink
+		Site built with ❤️ by <ExternalLink href="https://github.com/luxbe" showIcon>luxbe</ExternalLink
 		>
 	</p>
 </div>
