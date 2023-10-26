@@ -50,7 +50,7 @@
 
 <div class="shadow-mask" />
 <div
-	class="absolute inset-0 overflow-hidden grid place-items-center opacity-5 select-none -z-[1]"
+	class="absolute inset-0 overflow-hidden grid place-items-center select-none -z-[1]"
 	role="presentation"
 >
 	{#if mounted}
@@ -68,7 +68,7 @@
 
 <style lang="postcss">
 	.rsnano-text {
-		@apply text-9xl font-extrabold mx-4 my-2;
+		@apply text-9xl text-primary opacity-10 font-extrabold mx-4 my-2;
 	}
 
 	.shadow-mask {
