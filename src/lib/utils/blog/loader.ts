@@ -21,6 +21,9 @@ export const loadAllBlogPosts = async (): Promise<BlogPost[]> => {
 		allPosts.push(data);
 	}
 
+	// sort blog post by date
+	allPosts.sort((a, b) => b.meta.date.getTime() - a.meta.date.getTime());
+
 	return allPosts;
 };
 
