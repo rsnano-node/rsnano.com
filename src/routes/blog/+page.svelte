@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { BlogBackground, BlogPostPlaceholderBackground } from '$lib/background';
+	import { format } from 'date-fns';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -28,9 +29,9 @@
 				<BlogPostPlaceholderBackground />
 			</figure>
 			<div class="card-body w-2/3 py-0">
-				<h2 id="blog-{post.slug}" class="card-title flex-col items-start">
+				<h2 id="blog-{post.slug}" class="card-title text-2xl mb-2 flex-col items-start">
 					<span class="text-xs opacity-60">
-						{post.meta.date.toLocaleDateString()}
+						{format(post.meta.date, 'yyyy-MM-dd')}
 					</span>
 					{post.meta.title}
 				</h2>
