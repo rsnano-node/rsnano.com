@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { LogoBackground } from '$lib/background';
 	import { NavArrowDownIcon } from '@indaco/svelte-iconoir/nav-arrow-down';
-	import { StatusGraph } from '../lib/StatusGraph';
 	import About from './About.svelte';
 	import Community from './Community.svelte';
 	import Goals from './Goals.svelte';
+	import Status from './Status.svelte';
 	import WhyRust from './WhyRust.svelte';
 </script>
 
@@ -31,7 +31,7 @@
 <main class="prose max-w-6xl mx-auto flex flex-col gap-16 py-16">
 	<About />
 	<WhyRust />
-	<StatusGraph />
+	<Status />
 	<Goals />
 	<Community />
 </main>
