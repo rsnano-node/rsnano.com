@@ -9,23 +9,6 @@
 	import '../app.postcss';
 	import { scrolled } from '$lib/stores/scrolledStore';
 
-	// Fix inconsistent scroll behavior. See https://github.com/sveltejs/kit/pull/8724#issuecomment-1424436745
-	let scroll_behaviour: string;
-
-	beforeNavigate(() => {
-		scroll_behaviour = getComputedStyle(document.documentElement).scrollBehavior;
-		document.documentElement.style.scrollBehavior = 'auto';
-
-		// close navigation drawer
-		$navDrawer.open = false;
-	});
-
-	afterNavigate(() => {
-		if (scroll_behaviour) {
-			document.documentElement.style.scrollBehavior = scroll_behaviour;
-		}
-	});
-
 	const applyTheme = (theme: Theme | undefined) => {
 		if (theme === undefined) {
 			delete document.body.dataset['theme'];
@@ -35,6 +18,8 @@
 	};
 
 	const prefersDarkTheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+	let mainContentElement: HTMLElement;
 
 	onMount(() => {
 		const storedTheme = themeData.load();
@@ -47,6 +32,10 @@
 			themeData.set(prefferedTheme);
 		}
 	});
+
+	afterNavigate(() => {
+		mainContentElement.scroll({ top: 0 });
+	});
 </script>
 
 <main
@@ -54,10 +43,11 @@
 >
 	<input id="nav-drawer" type="checkbox" class="drawer-toggle" bind:checked={$navDrawer.open} />
 	<div
-		class="grow flex flex-col drawer-content overflow-y-scroll"
-		on:scroll={(e) => {
-			$scrolled = e.currentTarget.scrollTop;
+		class="grow flex flex-col drawer-content overflow-y-scroll scroll-smooth"
+		on:scroll={() => {
+			$scrolled = mainContentElement.scrollTop;
 		}}
+		bind:this={mainContentElement}
 	>
 		<Navbar />
 		<div class="grow isolate flex flex-col">
