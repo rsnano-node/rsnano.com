@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>RsNano | {title}</title>
 </svelte:head>
 
 <section class="hero text-center min-h-[16rem] bg-base-200">
