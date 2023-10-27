@@ -7,6 +7,7 @@
 	import { navDrawer } from '$lib/stores/navDrawer';
 	import { onMount } from 'svelte';
 	import '../app.postcss';
+	import { scrolled } from '$lib/stores/scrolledStore';
 
 	// Fix inconsistent scroll behavior. See https://github.com/sveltejs/kit/pull/8724#issuecomment-1424436745
 	let scroll_behaviour: string;
@@ -49,10 +50,15 @@
 </script>
 
 <main
-	class="w-full min-h-screen bg-base-100 flex flex-col prose max-w-none overflow-hidden drawer drawer-end"
+	class="w-full h-full bg-base-100 flex flex-col prose max-w-none overflow-hidden drawer drawer-end"
 >
 	<input id="nav-drawer" type="checkbox" class="drawer-toggle" bind:checked={$navDrawer.open} />
-	<div class="grow flex flex-col drawer-content">
+	<div
+		class="grow flex flex-col drawer-content overflow-y-scroll"
+		on:scroll={(e) => {
+			$scrolled = e.currentTarget.scrollTop;
+		}}
+	>
 		<Navbar />
 		<div class="grow isolate flex flex-col">
 			<slot />

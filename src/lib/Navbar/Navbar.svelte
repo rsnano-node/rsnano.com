@@ -2,25 +2,16 @@
 	import { LogoText } from '$lib/Icon';
 	import { Link, links } from '$lib/Link';
 	import { ThemeToggle } from '$lib/ThemeToggle';
+	import { scrolled } from '$lib/stores/scrolledStore';
 	import { GitHubIcon, MenuIcon } from '@indaco/svelte-iconoir';
-	import { onMount } from 'svelte';
+	import { derived } from 'svelte/store';
 
-	let navbarScrolled = false;
-
-	const updateScrollBar = () => {
-		navbarScrolled = window.scrollY > 50;
-	};
-
-	onMount(() => {
-		updateScrollBar();
-	});
+	$: navbarScrolled = derived(scrolled, (scrollY) => scrollY > 50);
 </script>
-
-<svelte:window on:scroll={updateScrollBar} />
 
 <div
 	class="fixed navbar transition-all duration-300 z-40 p-4"
-	class:navbar-scrolled={navbarScrolled}
+	class:navbar-scrolled={$navbarScrolled}
 >
 	<div class="navbar-start gap-2">
 		<Link data={links.home} class="inline-flex btn btn-ghost normal-case text-xl">
