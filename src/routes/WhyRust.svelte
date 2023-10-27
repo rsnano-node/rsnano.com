@@ -8,7 +8,8 @@
 </script>
 
 <Section id="why-rust" title="Why Rust?">
-	<div class="grid grid-cols-3 gap-16">
+	<!-- <div class="grid grid-cols-[repeat(auto-fill,_minmax(16rem,_1fr))] gap-16 items-center"> -->
+	<div class="gridish gridish-3 [&>*]:min-w-[16rem]">
 		<Card title="Performance">
 			<FlashIcon slot="icon" size="8rem" stroke-width="2" />
 			<p>
@@ -35,3 +36,11 @@
 		</Card>
 	</div>
 </Section>
+
+<style lang="postcss">
+	.test {
+		&:last-child {
+			grid-column: span;
+		}
+	}
+</style>

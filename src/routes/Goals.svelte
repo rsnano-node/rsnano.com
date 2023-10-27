@@ -6,7 +6,7 @@
 
 <section id="goals">
 	<h1>Goals</h1>
-	<div class="grid grid-cols-3 gap-16">
+	<div class="gridish gridish-3 [&>*]:min-w-[16rem]">
 		<Card title="100% Rust">
 			<RustIcon slot="icon" class="w-32 h-32" />
 			<p>

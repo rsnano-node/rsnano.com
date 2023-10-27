@@ -12,18 +12,22 @@
 
 	onMount(() => {
 		textBounds = exampleText.getBoundingClientRect();
-		calculateTextCount();
+
+		updateText();
 		mounted = true;
+	});
+
+	function updateText() {
+		calculateTextCount();
 
 		setTimeout(() => {
 			marginArray = marginMaxArray;
 		});
-	});
+	}
 
 	function calculateTextCount() {
-		console.log(window.outerHeight, window.outerWidth);
-		textCountX = Math.ceil(window.outerWidth / textBounds.width) * 2;
-		textCountY = Math.ceil(window.outerHeight / textBounds.height) * 2;
+		textCountX = Math.ceil(window.outerWidth / textBounds.width) * 3;
+		textCountY = Math.ceil(window.outerHeight / textBounds.height) * 3;
 
 		// generate max offset between + or - 100 and 50px
 		marginMaxArray = Array.from({ length: textCountY }, (_, k) => {
@@ -44,7 +48,7 @@
 	let marginArray = marginMinArray;
 </script>
 
-<svelte:window on:resize={calculateTextCount} />
+<svelte:window on:resize={updateText} />
 
 <span id="rsnano-blog-bg" class="fixed invisible rsnano-text" bind:this={exampleText}>RsNano</span>
 
@@ -54,7 +58,7 @@
 	role="presentation"
 >
 	{#if mounted}
-		<div class="absolute -rotate-[22.5deg]" transition:fade>
+		<div class="absolute -rotate-[22.5deg]">
 			{#each Array(textCountY) as _, i}
 				<div class="flex transition-all duration-1000" style:margin-left={`${marginArray[i]}px`}>
 					{#each Array(textCountX) as _}
@@ -68,7 +72,7 @@
 
 <style lang="postcss">
 	.rsnano-text {
-		@apply text-9xl text-primary opacity-10 font-extrabold mx-4 my-2;
+		@apply text-7xl lg:text-9xl text-primary opacity-10 font-extrabold mx-4 my-2;
 	}
 
 	.shadow-mask {

@@ -23,6 +23,16 @@
 	--tw-prose-body: hsl(var(--bc));
 }
 
+@layer utilities {
+	.gridish {
+		@apply flex flex-wrap justify-center [&>*]:grow gap-16;
+	}
+
+	.gridish-3 {
+		@apply [&>*]:basis-[calc(33.33333%_-_8rem)];
+	}
+}
+
 @layer components {
 	.mockup-code {
 		pre {

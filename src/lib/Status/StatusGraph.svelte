@@ -102,4 +102,4 @@
 	});
 </script>
 
-<canvas id="status-canvas" class="w-full h-full" bind:this={canvas} />
+<canvas id="status-canvas" class="w-full h-full max-w-full max-h-full" bind:this={canvas} />

@@ -14,8 +14,13 @@
 	$: suffix = address.substring(address.length - SUFFIX_LENGTH);
 </script>
 
-<p class={twMerge('inline-flex font-medium m-0 [text-decoration:inherit]', className)}>
-	<span class="text-primary">{prefix}</span>
-	{main}
-	<span class="text-primary">{suffix}</span>
+<p
+	class={twMerge(
+		'inline [overflow-wrap:anywhere] font-medium m-0 [text-decoration:inherit]',
+		className
+	)}
+>
+	<span class="text-primary mx-0">{prefix}</span><span>{main}</span><span class="text-primary mx-0"
+		>{suffix}</span
+	>
 </p>

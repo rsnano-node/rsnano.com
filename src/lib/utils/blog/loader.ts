@@ -28,8 +28,19 @@ export const loadAllBlogPosts = async (): Promise<BlogPost[]> => {
 };
 
 const loadBlogPostFile = async (file: string): Promise<BlogPost | undefined> => {
-	const slug = file.substring(0, file.length - BLOG_POST_FILE_EXTENSION.length);
-	const content = fs.readFileSync(path.join(BLOG_POST_PATH, file));
+	const slug = path.basename(path.normalize(file), BLOG_POST_FILE_EXTENSION);
+	const filePath = path.join(BLOG_POST_PATH, file);
+
+	if (!fs.existsSync(filePath)) {
+		return undefined;
+	}
+
+	if (!filePath.startsWith(BLOG_POST_PATH)) {
+		console.warn(`User tried to access invalid path <${filePath}>`);
+		return undefined;
+	}
+
+	const content = fs.readFileSync(filePath);
 
 	console.debug(`Parsing blog post <${slug}>`);
 	const res = await parser.process(content);

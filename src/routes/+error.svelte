@@ -9,7 +9,7 @@
 </script>
 
 <section class="grow grid place-items-center">
-	<div class="text-center">
+	<div class="text-center my-32">
 		<div class="mb-32">
 			<h1 class="text-9xl mb-8 text-primary">{$page.status}</h1>
 			<p class="text-4xl my-0">{$page.error?.message}</p>

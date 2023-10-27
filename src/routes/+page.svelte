@@ -14,9 +14,9 @@
 
 <section class="relative h-screen w-full">
 	<div class="w-full h-full grid place-items-center">
-		<div class="text-center">
-			<h1 class="text-9xl mb-0">Rs<span class="text-primary">Nano</span></h1>
-			<h2 class="text-4xl mt-8">
+		<div class="text-center mx-8">
+			<h1 class="text-7xl lg:text-9xl mb-0">Rs<span class="text-primary">Nano</span></h1>
+			<h2 class="text-2xl lg:text-4xl mt-4 lg:mt-8">
 				<span>A Rust port of <span class="text-primary">Nano</span></span>
 				<br />
 				<span> the feeless and digital currency </span>
@@ -28,7 +28,7 @@
 	</div>
 	<LogoBackground />
 </section>
-<main class="prose max-w-6xl mx-auto flex flex-col gap-16 py-16">
+<main class="w-full prose px-8 md:px-16 lg:mx-auto max-w-6xl flex flex-col gap-16 py-16">
 	<About />
 	<WhyRust />
 	<Status />

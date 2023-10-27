@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { ExternalLink } from '$lib/ExternalLink';
 	import { LogoText } from '$lib/Icon';
+	import { Link, links } from '$lib/Link';
 	import { ThemeToggle } from '$lib/ThemeToggle';
-	import { GitHubIcon } from '@indaco/svelte-iconoir';
+	import { GitHubIcon, MenuIcon } from '@indaco/svelte-iconoir';
 	import { onMount } from 'svelte';
 
 	let navbarScrolled = false;
@@ -22,18 +22,25 @@
 	class="fixed navbar transition-all duration-300 z-40 p-4"
 	class:navbar-scrolled={navbarScrolled}
 >
-	<div class="navbar-start">
-		<a href="/" class="btn btn-ghost">
+	<div class="navbar-start gap-2">
+		<Link data={links.home} class="btn btn-ghost normal-case text-xl">
 			<LogoText class="h-6" />
-		</a>
+		</Link>
 	</div>
 	<div class="navbar-end gap-2">
-		<a href="/blog" class="btn btn-ghost font-medium">Blog</a>
-
-		<ThemeToggle />
-		<ExternalLink href="https://github.com/simpago/rsnano-node" class="btn btn-ghost btn-square">
+		<Link data={links.blog} class="btn btn-ghost font-medium max-lg:hidden no-underline" />
+		<Link
+			data={{ ...links.github, icon: undefined }}
+			class="btn btn-ghost btn-square max-lg:hidden"
+		>
 			<GitHubIcon />
-		</ExternalLink>
+		</Link>
+		<ThemeToggle class="max-lg:hidden" />
+		<div class="dropdown lg:hidden">
+			<label for="nav-drawer" class="drawer-button btn btn-ghost btn-square">
+				<MenuIcon />
+			</label>
+		</div>
 	</div>
 </div>
 

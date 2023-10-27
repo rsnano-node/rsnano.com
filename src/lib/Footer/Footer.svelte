@@ -1,59 +1,33 @@
 <script lang="ts">
-	import { ExternalLink } from '$lib/ExternalLink';
 	import { LogoText } from '$lib/Icon';
-	import { DiscordIcon, TvIcon, TwitterIcon, YouTubeIcon } from '@indaco/svelte-iconoir';
+	import { Link, links } from '$lib/Link';
 </script>
 
 <div class="bg-base-200 py-8">
-	<footer class="footer prose max-w-6xl mx-auto">
+	<footer class="footer prose lg:max-w-6xl px-16 mx-auto">
 		<aside>
 			<span class="flex flex-col">
 				<LogoText />
 				<span class="my-2">A Rust port of Nano</span>
 			</span>
 
-			<ExternalLink href="https://github.com/simpago/rsnano-node" showIcon>Github</ExternalLink>
-			<a href="/legal" class="link link-hover">Legal</a>
+			<Link data={links.github} showIcon showExternalIcon linkHover />
+			<Link data={links.legal} showIcon showExternalIcon linkHover />
 		</aside>
-		<nav>
+		<in>
 			<header class="footer-title">Community</header>
-			<ExternalLink
-				href="https://www.youtube.com/@gschauwecker"
-				class="inline-flex items-center gap-1"
-				showIcon
-			>
-				<YouTubeIcon class="inline mr-1 w-4" /> YouTube
-			</ExternalLink>
-			<ExternalLink
-				href="https://www.twitch.tv/gschauwecker"
-				class="inline-flex items-center gap-1"
-				showIcon
-			>
-				<TvIcon class="inline mr-1 w-4" /> Twitch
-			</ExternalLink>
-			<ExternalLink
-				href="https://discord.gg/kBwvAyxEWE"
-				class="inline-flex items-center gap-1"
-				showIcon
-			>
-				<DiscordIcon class="inline mr-1 w-4" /> Discord
-			</ExternalLink>
-			<ExternalLink
-				href="https://twitter.com/gschauwecker"
-				class="inline-flex items-center gap-1"
-				showIcon
-			>
-				<TwitterIcon class="inline mr-1 w-4" /> Twitter
-			</ExternalLink>
-		</nav>
+			<Link data={links.youtube} showIcon showExternalIcon linkHover />
+			<Link data={links.twitch} showIcon showExternalIcon linkHover />
+			<Link data={links.discord} showIcon showExternalIcon linkHover />
+			<Link data={links.twitter} showIcon showExternalIcon linkHover />
+		</in>
 		<nav>
 			<header class="footer-title">Other</header>
-			<a href="/blog" class="link link-hover">Blog</a>
-			<ExternalLink href="https://monitor.rsnano.com" showIcon>Node Monitor</ExternalLink>
+			<Link data={links.blog} showIcon showExternalIcon linkHover />
+			<Link data={links.nodeMonitor} showIcon showExternalIcon linkHover />
 		</nav>
 	</footer>
 	<p class="text-center text-sm mt-8 mb-0">
-		Site built with ❤️ by <ExternalLink href="https://github.com/luxbe" showIcon>luxbe</ExternalLink
-		>
+		Site built with ❤️ by <Link data={links.luxbe} showExternalIcon linkHover />
 	</p>
 </div>
