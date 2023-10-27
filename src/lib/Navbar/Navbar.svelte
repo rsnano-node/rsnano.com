@@ -23,15 +23,18 @@
 	class:navbar-scrolled={navbarScrolled}
 >
 	<div class="navbar-start gap-2">
-		<Link data={links.home} class="btn btn-ghost normal-case text-xl">
+		<Link data={links.home} class="inline-flex btn btn-ghost normal-case text-xl">
 			<LogoText class="h-6" />
 		</Link>
 	</div>
 	<div class="navbar-end gap-2">
-		<Link data={links.blog} class="btn btn-ghost font-medium max-lg:hidden no-underline" />
+		<Link
+			data={links.blog}
+			class="inline-flex btn btn-ghost font-medium max-lg:hidden no-underline"
+		/>
 		<Link
 			data={{ ...links.github, icon: undefined }}
-			class="btn btn-ghost btn-square max-lg:hidden"
+			class="inline-flex btn btn-ghost btn-square max-lg:hidden"
 		>
 			<GitHubIcon />
 		</Link>
