@@ -1,11 +1,11 @@
 <script>
 	import { Card } from '$lib/Card';
 	import { RustIcon } from '$lib/Icon';
+	import Section from '$lib/Section/Section.svelte';
 	import { AppleShortcutsIcon, TestTubeIcon } from '@indaco/svelte-iconoir';
 </script>
 
-<section id="goals">
-	<h1>Goals</h1>
+<Section id="goals" title="Goals">
 	<div class="gridish gridish-3 [&>*]:min-w-[16rem]">
 		<Card title="100% Rust">
 			<RustIcon slot="icon" class="w-32 h-32" />
@@ -29,4 +29,4 @@
 			</p>
 		</Card>
 	</div>
-</section>
+</Section>
