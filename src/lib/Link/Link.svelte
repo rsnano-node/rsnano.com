@@ -13,21 +13,15 @@
 	export { className as class };
 </script>
 
-<span class="inline-flex">
+<span>
 	<a
 		href={data.href}
 		target={data.external ? '_blank' : '_self'}
-		class={twMerge(
-			'link peer inline-flex items-center gap-2',
-			linkHover && 'link-hover',
-			className
-		)}
+		class={twMerge('link peer inline align-middle', linkHover && 'link-hover', className)}
 	>
 		{#if showIcon}
-			<svelte:component this={data.icon} class="w-4 h-4" />
-		{/if}
-		{#if !$$slots.default}
-			{data.title}
+			<svelte:component this={data.icon} class="w-4 h-4 inline mr-2" />{/if}{#if !$$slots.default}
+			<span>{data.title}</span>
 		{:else}
 			<slot />
 		{/if}

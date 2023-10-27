@@ -7,7 +7,7 @@
 </script>
 
 <Section id="status" title="Current Status">
-	<p>Visit the <Link data={links.blog} showIcon>dev blog</Link> for the latest progress report.</p>
+	<p>Visit the <Link data={links.blog}>dev blog</Link> for the latest progress report.</p>
 	<p>We keep track of how much C++ code is already translated:</p>
 	<div class="w-full gridish lg:flex-nowrap max-lg:gap-0 pt-8">
 		<div class="basis-1/4 text-center shrink">
