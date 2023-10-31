@@ -10,7 +10,7 @@
 
 	export { className as class };
 
-	export let highlight: keyof typeof progressData | undefined = '2022-09';
+	export let highlight: keyof typeof progressData | undefined = undefined;
 
 	let canvas: HTMLCanvasElement;
 	let chart: Chart<'line', {}, {}>;
