@@ -10,6 +10,7 @@
 		YouTubeIcon
 	} from '@indaco/svelte-iconoir';
 	import { Section } from '$lib/Section';
+	import { YoutubeVideo } from '$lib/YoutubeVideo';
 
 	const nanoDonationAddress = 'nano_1iawmcfwmmdyr7xmnordt71gpnhnao8rsk4nywq5khtmedocaj6bafk4fb8h';
 	const nanoRepresentativeAddress =
@@ -46,14 +47,7 @@
 		Every Tuesday at <span class="font-bold">19:00 UTC</span> I do a coding live stream where I work
 		on RsNano. These streams are a good starting point for new contributors. Watch it on YouTube:
 	</p>
-	<iframe
-		class="mx-auto w-full lg:w-1/2 aspect-video"
-		src="https://www.youtube.com/embed/2OvJ6dkQbZU"
-		title="YouTube video player"
-		frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-		allowfullscreen={true}
-	/>
+	<YoutubeVideo src="https://www.youtube-nocookie.com/embed/2OvJ6dkQbZU" />
 </Section>
 <Section id="contribute" title="Contribute">
 	<p>

@@ -4,6 +4,11 @@ date: 2023-01-26T07:35:53+01:00
 draft: false
 ---
 
+<script>
+  import { StatusGraph } from '$lib/Status';
+  import { YoutubeVideo } from '$lib/YoutubeVideo'
+</script>
+
 Welcome to the fifth issue of _This month in RsNano_! RsNano is a Rust port of the original nano-node. This is a monthly
 summary of its progress and community. Want to get involved? [We love contributions](https://rsnano.com/#community).
 
@@ -29,17 +34,7 @@ This changed the current line count (excluding comments and blank lines) to:
 
 The ported status increased by **0.8 percentage points** to 32.6%. This increase is low again because I had taken time off over Christmas and New Year.
 
-<div class="infogram-embed" data-id="f710250f-27e9-46eb-83c7-fc006b5266c6" data-type="interactive" data-title="RsNano
-Progress 01/2023"></div><script>!function(e,i,n,s){var
-t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else
-if(!e.getElementById(n)){var
-	o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div
-	style="padding:8px
-	0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px
-	solid #dadada;margin:0 30px"><a href="https://infogram.com/f710250f-27e9-46eb-83c7-fc006b5266c6"
-	style="color:#989898!important;text-decoration:none!important;" target="_blank">RsNano Progress
-	01/2023</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;"
-	target="_blank" rel="nofollow">Infogram</a></div>
+<StatusGraph highlight="2023-01"/>
 
 ## Vacation and Nano Blog
 
@@ -60,9 +55,7 @@ The whole thing was meant as an experiment. If there was enough interest, then I
 
 You can watch the stream here on YouTube:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xrgGtdMYcKM" title="YouTube video player"
-frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-web-share" allowfullscreen></iframe>
+<YoutubeVideo src="https://www.youtube-nocookie.com/embed/xrgGtdMYcKM" />
 
 If you would like to get involved in RsNano, we always love contributions!
 
@@ -72,7 +65,7 @@ Since the last live stream was better received than expected, I will now stream 
 
 This time we will try again to port the class `backlog_population` to Rust.
 
-You can watch the upcoming stream here: https://www.youtube.com/watch?v=xPn4HzGPt1s
+You can watch the upcoming stream here: <YoutubeVideo src="https://www.youtube-nocookie.com/embed/xPn4HzGPt1s" />
 
 ## Porting of `confirmation_height_processor`
 

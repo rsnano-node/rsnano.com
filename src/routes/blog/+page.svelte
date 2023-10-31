@@ -37,7 +37,7 @@
 						{post.meta.title}
 					</h2>
 					<p>
-						{post.summary}
+						{post.meta.summary}
 					</p>
 				</div>
 			</a>

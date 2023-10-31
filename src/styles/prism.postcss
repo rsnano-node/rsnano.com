@@ -1,0 +1,196 @@
+code[class*='language-'],
+pre[class*='language-'] {
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	color: var(--prism-bc);
+	background: var(--prism-bg);
+	font-family: Roboto Mono, monospace;
+	font-size: 1em;
+	line-height: 1.5em;
+	tab-size: 4;
+	hyphens: none;
+}
+
+code[class*='language-']::selection,
+pre[class*='language-']::selection,
+code[class*='language-'] ::selection,
+pre[class*='language-'] ::selection {
+	background: var(--prism-selection-bg);
+	color: var(--prism-selection-bc);
+}
+
+:not(pre) > code[class*='language-'] {
+	white-space: normal;
+	border-radius: 0.2em;
+	padding: 0.1em;
+}
+
+pre[class*='language-'] {
+	overflow: auto;
+	position: relative;
+	margin: 0.5em 0;
+	padding: 1.25em 1em;
+}
+
+.language-css > code,
+.language-sass > code,
+.language-scss > code {
+	color: var(--prism-css-bc);
+}
+
+[class*='language-'] .namespace {
+	opacity: 0.7;
+}
+
+.token.atrule {
+	color: var(--prism-tkn-atrule);
+}
+
+.token.attr-name {
+	color: var(--prism-tkn-attr-name);
+}
+
+.token.attr-value {
+	color: var(--prism-tkn-attr-value);
+}
+
+.token.attribute {
+	color: var(--prism-tkn-attribute);
+}
+
+.token.boolean {
+	color: var(--prism-tkn-boolean);
+}
+
+.token.builtin {
+	color: var(--prism-tkn-builtin);
+}
+
+.token.cdata {
+	color: var(--prism-tkn-cdata);
+}
+
+.token.char {
+	color: var(--prism-tkn-char);
+}
+
+.token.class {
+	color: var(--prism-tkn-class);
+}
+
+.token.class-name {
+	color: var(--prism-tkn-class-name);
+}
+
+.token.color {
+	color: var(--prism-tkn-color);
+}
+
+.token.comment {
+	color: var(--prism-tkn-comment);
+}
+
+.token.constant {
+	color: var(--prism-tkn-constant);
+}
+
+.token.deleted {
+	color: var(--prism-tkn-deleted);
+}
+
+.token.doctype {
+	color: var(--prism-tkn-doctype);
+}
+
+.token.entity {
+	color: var(--prism-tkn-entity);
+}
+
+.token.function {
+	color: var(--prism-tkn-function);
+}
+
+.token.hexcode {
+	color: var(--prism-tkn-hexcode);
+}
+
+.token.id {
+	color: var(--prism-tkn-id);
+	font-weight: bold;
+}
+
+.token.important {
+	color: var(--prism-tkn-important);
+	font-weight: bold;
+}
+
+.token.inserted {
+	color: var(--prism-tkn-inserted);
+}
+
+.token.keyword {
+	color: var(--prism-tkn-keyword);
+}
+
+.token.number {
+	color: var(--prism-tkn-number);
+}
+
+.token.operator {
+	color: var(--prism-tkn-operator);
+}
+
+.token.prolog {
+	color: var(--prism-tkn-prolog);
+}
+
+.token.property {
+	color: var(--prism-tkn-property);
+}
+
+.token.pseudo-class {
+	color: var(--prism-tkn-pseudo-class);
+}
+
+.token.pseudo-element {
+	color: var(--prism-tkn-pseudo-element);
+}
+
+.token.punctuation {
+	color: var(--prism-tkn-punctuation);
+}
+
+.token.regex {
+	color: var(--prism-tkn-regex);
+}
+
+.token.selector {
+	color: var(--prism-tkn-selector);
+}
+
+.token.string {
+	color: var(--prism-tkn-string);
+}
+
+.token.symbol {
+	color: var(--prism-tkn-symbol);
+}
+
+.token.tag {
+	color: var(--prism-tkn-tag);
+}
+
+.token.unit {
+	color: var(--prism-tkn-unit);
+}
+
+.token.url {
+	color: var(--prism-tkn-url);
+}
+
+.token.variable {
+	color: var(--prism-tkn-variable);
+}

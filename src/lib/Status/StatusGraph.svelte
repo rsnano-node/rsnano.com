@@ -1,12 +1,19 @@
 <script lang="ts">
-	import 'chartjs-adapter-date-fns';
 	import { themeData } from '$lib/stores';
 	import { progressData } from '$lib/utils/progress';
-	import { Chart } from 'chart.js/auto';
+	import { Chart, type ScriptableContext } from 'chart.js/auto';
+	import 'chartjs-adapter-date-fns';
 	import { onMount } from 'svelte';
+	import { twMerge } from 'tailwind-merge';
+
+	let className: string | undefined = undefined;
+
+	export { className as class };
+
+	export let highlight: keyof typeof progressData | undefined = '2022-09';
 
 	let canvas: HTMLCanvasElement;
-	let chart: Chart;
+	let chart: Chart<'line', {}, {}>;
 
 	const updateDataset = () => {
 		const computedStyle = getComputedStyle(document.body);
@@ -14,22 +21,37 @@
 		const primaryColor = computedStyle.getPropertyValue('--p');
 		const baseContentColor = computedStyle.getPropertyValue('--bc');
 
+		const data = Object.entries(progressData);
+
+		const highlightFunction = <T>(
+			defaultValue: T,
+			highlightValue: T
+		): ((ctx: ScriptableContext<'line'>) => T) => {
+			return (ctx) => {
+				const [key, _] = data[ctx.dataIndex];
+				return key === highlight ? highlightValue : defaultValue;
+			};
+		};
+
 		chart.data.datasets = [
 			{
 				label: 'Rust',
-				data: Object.values(progressData),
+				data: data.map(([key, value]) => value),
 				yAxisID: 'y',
 				fill: true,
 				backgroundColor: `hsl(${primaryColor} / 10%)`,
 				borderColor: `hsl(${primaryColor} / 80%)`,
 				pointBackgroundColor: `hsl(${backgroundColor})`,
-				pointBorderColor: `hsl(${baseContentColor} / 25%)`,
-				pointHoverBorderColor: `hsl(${baseContentColor} / 50%)`,
-				pointBorderWidth: 2,
-				pointHoverBorderWidth: 2,
 				pointStyle: 'circle',
-				pointRadius: 6,
-				pointHoverRadius: 8
+				pointBorderColor: highlightFunction(
+					`hsl(${baseContentColor} / 25%)`,
+					`hsl(${baseContentColor} / 50%)`
+				),
+				pointHoverBorderColor: `hsl(${baseContentColor} / 100%)`,
+				pointBorderWidth: highlightFunction(2, 4),
+				pointHoverBorderWidth: highlightFunction(2, 4),
+				pointRadius: highlightFunction(6, 10),
+				pointHoverRadius: highlightFunction(8, 12)
 			}
 		];
 
@@ -102,4 +124,6 @@
 	});
 </script>
 
-<canvas id="status-canvas" class="w-full h-full max-w-full max-h-full" bind:this={canvas} />
+<div class={twMerge('max-w-full max-h-full', className)}>
+	<canvas id="status-canvas" class="w-full h-full" bind:this={canvas} />
+</div>

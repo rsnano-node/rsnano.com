@@ -4,6 +4,10 @@ date: 2022-10-27T07:49:01+02:00
 draft: false
 ---
 
+<script>
+  import { StatusGraph } from '$lib/Status';
+</script>
+
 Welcome to the second issue of _This month in RsNano_! RsNano is a Rust port of the original nano-node. This is a monthly
 summary of its progress and community. Want to get involved? [We love contributions](https://rsnano.com/#community).
 
@@ -24,7 +28,7 @@ The ported status increased by **1.5 percentage points** to 25%. This is less th
 due to the fact that most of this months work went into rewriting the LMDB data stores with the Rust crate `lmdb-rkv`,
 which _decreased_ the Rust line count.
 
-<div class="infogram-embed" data-id="5ddabbc1-5382-4e87-a2ab-0dd8c4533059" data-type="interactive" data-title="RsNano Progress 10/2022"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/5ddabbc1-5382-4e87-a2ab-0dd8c4533059" style="color:#989898!important;text-decoration:none!important;" target="_blank">RsNano Progress 10/2022</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+<StatusGraph highlight="2022-10"/>
 
 ## Database layer fully ported
 

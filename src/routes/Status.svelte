@@ -18,8 +18,6 @@
 			</h2>
 			<p class="w-full mt-2">of the codebase is currently written in Rust.</p>
 		</div>
-		<div class="grow">
-			<StatusGraph />
-		</div>
+		<StatusGraph class="grow" />
 	</div>
 </Section>

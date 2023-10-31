@@ -4,6 +4,10 @@ date: 2022-11-28T07:35:30+01:00
 draft: false
 ---
 
+<script>
+  import { StatusGraph } from '$lib/Status';
+</script>
+
 Welcome to the third issue of _This month in RsNano_! RsNano is a Rust port of the original nano-node. This is a monthly
 summary of its progress and community. Want to get involved? [We love contributions](https://rsnano.com/#community).
 
@@ -22,7 +26,7 @@ This changed the current line count (excluding comments and blank lines) to:
 
 The ported status increased by **5.2 percentage points** to 30.4%. That was the most productive month we've ever had, percentage-wise. The big increase came from porting a lot of unit tests.
 
-<div class="infogram-embed" data-id="b246ddb9-a173-45f9-b84a-f85fb283fc5d" data-type="interactive" data-title="RsNano Progress 11/2022"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/b246ddb9-a173-45f9-b84a-f85fb283fc5d" style="color:#989898!important;text-decoration:none!important;" target="_blank">RsNano Progress 11/2022</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+<StatusGraph highlight="2022-11"/>
 
 ## Ledger fully ported
 
@@ -44,10 +48,6 @@ Currently, 380 unit tests run in Rust in 2.2 seconds. This is too slow for my ta
 
 I thought it would be helpful to create a YouTube video to help new contributors get started. I have created these
 videos quick and dirty, but I think they are still helpful.They include the cloning and building of the project. Unfortunately the part where I port a small class is still missing, but I'm going to deliver this part in December.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bXns2AecONI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-me<iframe width="560" height="315" src="https://www.youtube.com/embed/VYwoOh8RkIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VYwoOh8RkIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Community Contributions
 

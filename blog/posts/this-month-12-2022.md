@@ -4,6 +4,10 @@ date: 2022-12-29T12:03:00+01:00
 draft: false
 ---
 
+<script>
+  import { StatusGraph } from '$lib/Status';
+</script>
+
 Welcome to the fourth issue of _This month in RsNano_! RsNano is a Rust port of the original nano-node. This is a monthly
 summary of its progress and community. Want to get involved? [We love contributions](https://rsnano.com/#community).
 
@@ -30,7 +34,7 @@ This changed the current line count (excluding comments and blank lines) to:
 
 The ported status increased by **1.4 percentage points** to 31.8%. This increase is very small because the focus this month was not on porting, but on improving code quality.
 
-<div class="infogram-embed" data-id="79c6a743-1494-4493-a103-acaef7b750af" data-type="interactive" data-title="RsNano Progress 12/2022"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/79c6a743-1494-4493-a103-acaef7b750af" style="color:#989898!important;text-decoration:none!important;" target="_blank">RsNano Progress 12/2022</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+<StatusGraph highlight="2022-12"/>
 
 ## Summary
 
@@ -44,7 +48,7 @@ Once the modules were separated out, the rest of December was invested in **impr
 
 ## Live stream on Tuesday, Jan 10, at 19:30 UTC
 
-Unfortunately, I didn't get around to creating more videos for new contributors. So instead, I'm going to try a development livestream in January. In this stream I'll be working on RsNano for two hours and you can see how Nano works under the hood, how Rust differs from C++, or you can just say hi in chat. If such a live stream is well received, I would like to do it once a month. The stream starts on Tuesday 10 January at 19:30 UTC (20:30 Berlin / 14:30 EST) on [my YouTube channel](https://www.youtube.com/channel/UCZfQyXQPp2mK57f6QeDhU_g). I will post the exact link on Reddit and Discord as the date gets closer.
+Unfortunately, I didn't get around to creating more videos for new contributors. So instead, I'm going to try a development livestream in January. In this stream I'll be working on RsNano for two hours and you can see how Nano works under the hood, how Rust differs from C++, or you can just say hi in chat. If such a live stream is well received, I would like to do it once a month. The stream starts on Tuesday 10 January at 19:30 UTC (20:30 Berlin / 14:30 EST) on [my YouTube channel](https://www.youtube.com/@gschauwecker). I will post the exact link on Reddit and Discord as the date gets closer.
 
 ## Refactoring the `LedgerProcessor`
 
@@ -52,7 +56,7 @@ _This section is very technical and has as target audience core devs and devs of
 
 In the original nano node, the `ledger_processor` class is responsible for the validation and insertion of a new block into the ledger. The `ledger` class uses the `ledger_processor` in the following way:
 
-```C++
+```cpp
 nano::process_return nano::ledger::process (nano::write_transaction const & transaction_a, nano::block & block_a)
 {
 	debug_assert (!constants.work.validate_entry (block_a) || constants.genesis == nano::dev::genesis);
@@ -68,7 +72,7 @@ nano::process_return nano::ledger::process (nano::write_transaction const & tran
 
 As you can see the `ledger_processor` implements the visitor pattern and there is a callback function for each block type. Let's have a look at one of these callback functions:
 
-```C++
+```cpp
 void ledger_processor::receive_block (nano::receive_block & block_a)
 {
 	auto hash (block_a.hash ());
@@ -277,7 +281,7 @@ _This section is very technical and has as target audience core devs and devs of
 
 The `RollbackVisitor` has the responsibility to remove a block from the ledger. It is similar to the original LedgerProcessor. It implements the visitor pattern, has complex functions and a lot of duplicated code. Let's have a look at one of its callback functions:
 
-```C++
+```cpp
 void state_block (nano::state_block const & block_a) override
 	{
 		auto hash (block_a.hash ());

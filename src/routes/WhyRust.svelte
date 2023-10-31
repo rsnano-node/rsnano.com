@@ -36,11 +36,3 @@
 		</Card>
 	</div>
 </Section>
-
-<style lang="postcss">
-	.test {
-		&:last-child {
-			grid-column: span;
-		}
-	}
-</style>

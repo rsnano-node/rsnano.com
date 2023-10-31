@@ -4,6 +4,10 @@ date: 2023-05-23T06:30:13+02:00
 draft: false
 ---
 
+<script>
+  import { StatusGraph } from '$lib/Status';
+</script>
+
 Welcome to the sixth issue of _This month in RsNano_! RsNano is a Rust port of the original nano-node. This is a monthly
 summary of its progress and community. Want to get involved? [We love contributions](https://rsnano.com/#community).
 
@@ -30,7 +34,7 @@ This changed the current line count (excluding comments and blank lines) to:
 
 The ported status increased by **3.9 percentage points** to 36.5%.
 
-<div class="infogram-embed" data-id="d2733234-b7f7-4355-86e5-63aef9339b9d" data-type="interactive" data-title="RsNano Translation Progress"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/d2733234-b7f7-4355-86e5-63aef9339b9d" style="color:#989898!important;text-decoration:none!important;" target="_blank">RsNano Translation Progress</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+<StatusGraph highlight="2023-05"/>
 
 ## Fiono's internship
 
@@ -75,7 +79,7 @@ I resume the weekly live streams. The live streams will be **every Tuesday from 
 
 In the upcoming stream we will port a part of nano_node to Rust and there will be a 5 Nano giveaway!
 
-You can watch the live streams on YouTube: https://www.youtube.com/channel/UCZfQyXQPp2mK57f6QeDhU_g
+You can watch the live streams on YouTube: https://www.youtube.com/@gschauwecker
 or on Twitch: https://www.twitch.tv/gschauwecker
 
 ## Join us

@@ -1,24 +1,47 @@
-import { Metadata, type BlogPost } from './types';
-import { parser } from './parser';
-import fs from 'fs';
-import * as path from 'path';
-import { BLOG_POST_FILE_EXTENSION, BLOG_POST_PATH } from './index';
+import { Metadata, type BlogPost, type MdsvexImport } from './types';
+
+type ModuleResolver = () => Promise<MdsvexImport>;
+
+const loadAllBlogPostModules = (): [slug: string, resolver: ModuleResolver][] => {
+	const modules = import.meta.glob('../../../../blog/posts/*.{md,svx}');
+
+	return Object.entries(modules).map(([file, resolver]) => {
+		const slug = file.replace(/^\/?(.+\/)*(.+)\.(.+)$/, '$2');
+		return [slug, resolver as ModuleResolver];
+	});
+};
+
+const callBlogPostResolver = async (
+	slug: string,
+	resolver: ModuleResolver
+): Promise<BlogPost | undefined> => {
+	try {
+		const module = await resolver();
+
+		const meta = Metadata.parse(module.metadata);
+
+		return {
+			component: module.default,
+			meta,
+			slug
+		};
+	} catch (e) {
+		console.error(`Failed to load post data <${slug}>!`, e);
+		return undefined;
+	}
+};
 
 export const loadAllBlogPosts = async (): Promise<BlogPost[]> => {
 	const allPosts: BlogPost[] = [];
 
-	const files = fs.readdirSync(BLOG_POST_PATH);
-	const blogPostFileNames = files.filter((file) => file.endsWith(BLOG_POST_FILE_EXTENSION));
+	const modules = loadAllBlogPostModules();
 
-	for (const file of blogPostFileNames) {
-		const data = await loadBlogPostFile(file);
+	for (const module of modules) {
+		const data = await callBlogPostResolver(...module);
 
-		if (data === undefined) {
-			console.error(`Failed to load post data for ${file}!`);
-			continue;
+		if (data !== undefined) {
+			allPosts.push(data);
 		}
-
-		allPosts.push(data);
 	}
 
 	// sort blog post by date
@@ -27,38 +50,15 @@ export const loadAllBlogPosts = async (): Promise<BlogPost[]> => {
 	return allPosts;
 };
 
-const loadBlogPostFile = async (file: string): Promise<BlogPost | undefined> => {
-	const slug = path.basename(path.normalize(file), BLOG_POST_FILE_EXTENSION);
-	const filePath = path.join(BLOG_POST_PATH, file);
-
-	if (!fs.existsSync(filePath)) {
-		return undefined;
-	}
-
-	if (!filePath.startsWith(BLOG_POST_PATH)) {
-		console.warn(`User tried to access invalid path <${filePath}>`);
-		return undefined;
-	}
-
-	const content = fs.readFileSync(filePath);
-
-	console.debug(`Parsing blog post <${slug}>`);
-	const res = await parser.process(content);
-
-	const summary = res.data.summary as string;
-
-	console.debug(`Parsing metadata`);
-	const meta = Metadata.parse(res.data.matter);
-
-	return {
-		slug,
-		meta,
-		html: res.value.toString(),
-		summary
-	};
-};
-
 export const loadBlogPost = async (slug: string): Promise<BlogPost | undefined> => {
-	const file = slug + BLOG_POST_FILE_EXTENSION;
-	return loadBlogPostFile(file);
+	const modules = loadAllBlogPostModules();
+
+	const blogModule = modules.find(([moduleSlug]) => moduleSlug === slug);
+
+	if (blogModule === undefined) {
+		console.warn(`User tried to access invalid blog entry <${slug}>`);
+		return undefined;
+	}
+
+	return await callBlogPostResolver(...blogModule);
 };
