@@ -1,13 +1,11 @@
 <script lang="ts">
-	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	import { afterNavigate } from '$app/navigation';
 	import { Footer } from '$lib/Footer';
-	import { Navbar } from '$lib/Navbar';
 	import { NavDrawer } from '$lib/NavDrawer';
-	import { themeData, type Theme } from '$lib/stores';
-	import { navDrawer } from '$lib/stores/navDrawer';
+	import { Navbar } from '$lib/Navbar';
+	import { consent, navDrawer, scrolled, themeData, type Theme } from '$lib/stores';
 	import { onMount } from 'svelte';
 	import '../app.postcss';
-	import { scrolled } from '$lib/stores/scrolledStore';
 
 	const applyTheme = (theme: Theme | undefined) => {
 		if (theme === undefined) {
@@ -30,6 +28,11 @@
 		} else {
 			const prefferedTheme = prefersDarkTheme() ? 'dark' : 'light';
 			themeData.set(prefferedTheme);
+		}
+
+		const storedConsent = consent.load();
+		if (storedConsent !== undefined) {
+			consent.set(storedConsent);
 		}
 	});
 
