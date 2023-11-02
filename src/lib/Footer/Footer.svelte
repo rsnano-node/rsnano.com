@@ -12,7 +12,7 @@
 			</span>
 
 			<Link data={links.github} showIcon showExternalIcon linkHover />
-			<Link data={links.legal} showIcon showExternalIcon linkHover />
+			<Link data={links.privacy} showIcon linkHover />
 		</aside>
 		<in>
 			<header class="footer-title">Community</header>
@@ -23,7 +23,7 @@
 		</in>
 		<nav>
 			<header class="footer-title">Other</header>
-			<Link data={links.blog} showIcon showExternalIcon linkHover />
+			<Link data={links.blog} showIcon linkHover />
 			<Link data={links.nodeMonitor} showIcon showExternalIcon linkHover />
 		</nav>
 	</footer>

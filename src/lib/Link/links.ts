@@ -20,7 +20,12 @@ export type LinkData = {
 export const links = {
 	home: { href: '/', external: false, title: 'Home', icon: HomeIcon },
 	blog: { href: '/blog', external: false, title: 'Blog', icon: MultiplePagesIcon },
-	legal: { href: '/legal', external: false, title: 'Legal', icon: PrivacypolicyIcon },
+	privacy: { href: '/privacy', external: false, title: 'Legal & Privacy', icon: PrivacypolicyIcon },
+	youtubePrivacy: {
+		href: 'https://policies.google.com/privacy',
+		external: true,
+		title: 'YouTube privacy policy'
+	},
 	discord: {
 		href: 'https://discord.gg/kBwvAyxEWE',
 		external: true,

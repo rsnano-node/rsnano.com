@@ -25,7 +25,7 @@
 			<Link data={links.blog} showIcon linkHover />
 		</li>
 		<li class="grid place-items-center">
-			<Link data={links.legal} showIcon linkHover />
+			<Link data={links.privacy} showIcon linkHover />
 		</li>
 		<div class="grow" />
 		<div class="divider divider-vertical" />

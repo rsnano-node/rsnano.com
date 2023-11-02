@@ -2,7 +2,7 @@
 	import { LogoText } from '$lib/Icon';
 	import { Link, links } from '$lib/Link';
 	import { ThemeToggle } from '$lib/ThemeToggle';
-	import { scrolled } from '$lib/stores/scrolledStore';
+	import { scrolled } from '$lib/stores';
 	import { GitHubIcon, MenuIcon } from '@indaco/svelte-iconoir';
 	import { derived } from 'svelte/store';
 
