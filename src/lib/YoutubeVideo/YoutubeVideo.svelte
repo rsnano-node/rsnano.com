@@ -19,13 +19,13 @@
 		<div class="card w-full h-full bg-base-200">
 			<div class="card-body max-h-full max-lg:p-6">
 				<h2 class="card-title my-0">YouTube blocked due to privacy settings</h2>
-				<div class="overflow-y-auto">
-					<p class="text-sm my-0">Please accept YouTube cookies to play this video.</p>
-					<p class="text-sm my-0">
+				<div class="grow overflow-y-auto min-h-12">
+					<p class="text-sm">Please accept YouTube cookies to play this video.</p>
+					<p class="text-sm">
 						By accepting you will be accessing content from YouTube, a service provided by an
 						external third party.
 					</p>
-					<p class="text-sm my-0">
+					<p class="text-sm">
 						<Link data={links.youtubePrivacy} showExternalIcon />
 					</p>
 				</div>
