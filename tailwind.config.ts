@@ -1,5 +1,5 @@
-import daisyui from 'daisyui';
 import typography from '@tailwindcss/typography';
+import daisyui from 'daisyui';
 import themes from 'daisyui/src/theming/themes';
 
 /** @type {import('tailwindcss').Config}*/
@@ -22,6 +22,7 @@ const config = {
 					'base-100': '#f4fafe',
 					'base-200': '#eff4f7',
 					'base-300': '#dee8ef',
+					'info': '#1e7db8',
 					// Prism theme adapted from: https://github.com/PrismJS/prism-themes/blob/master/themes/prism-material-light.css
 					'--prism-bc': '#90a4ae',
 					'--prism-bg': '#eff4f7',
@@ -72,6 +73,7 @@ const config = {
 					'base-100': '#051723',
 					'base-200': '#031017',
 					'base-300': '#02080c',
+					'info': '#0A4366',
 					// Prism theme adapted from: https://github.com/PrismJS/prism-themes/blob/master/themes/prism-material-oceanic.css
 					'--prism-bc': '#c3cee3',
 					'--prism-bg': '#031017',
