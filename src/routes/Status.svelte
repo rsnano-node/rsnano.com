@@ -11,10 +11,13 @@
 	<p>We keep track of how much C++ code is already translated:</p>
 	<div class="w-full gridish lg:flex-nowrap max-lg:gap-0 pt-8">
 		<div class="basis-1/4 text-center shrink">
-			<h2 class="my-0 whitespace-nowrap">
-				<span class="text-6xl text-primary">{currentProgress[1]}</span><span class="text-3xl"
-					>%</span
+			<h2 class="my-0 text-nowrap">
+				<span class="text-6xl text-primary mr-0">{currentProgress[1].toFixed(0)}</span><span
+					class="text-3xl text-primary"
 				>
+					.{(currentProgress[1] % 1).toFixed(2).substring(2)}
+				</span>
+				<span class="text-3xl">%</span>
 			</h2>
 			<p class="w-full mt-2">of the codebase is currently written in Rust.</p>
 		</div>
