@@ -14,10 +14,11 @@
 		"test:integration": "playwright test",
 		"test:unit": "vitest"
 	},
+	"packageManager": "pnpm@9.1.1",
 	"devDependencies": {
 		"@indaco/svelte-iconoir": "^7.7.0",
 		"@playwright/test": "^1.44.0",
-		"@sveltejs/adapter-vercel": "^5.3.0",
+		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/kit": "^2.5.8",
 		"@sveltejs/vite-plugin-svelte": "^3.1.0",
 		"@tailwindcss/typography": "^0.5.13",
