@@ -1,8 +1,9 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+	import { Section } from '$lib/Section';
 	import { BlogBackground, BlogPostPlaceholderBackground } from '$lib/background';
 	import { format } from 'date-fns';
 	import type { PageData } from './$types';
-	import Section from '$lib/Section/Section.svelte';
 
 	export let data: PageData;
 </script>
@@ -24,7 +25,7 @@
 		{#each data.posts as post}
 			<a
 				class="card mx-auto flex items-center lg:flex-row hover:bg-base-200 transition-colors no-underline mt-8"
-				href="/blog/post/{post.slug}"
+				href="{base}/blog/post/{post.slug}"
 			>
 				<figure class="w-full md:w-2/3 lg:w-1/3 aspect-video m-2 lg:m-6 p-6">
 					<BlogPostPlaceholderBackground />

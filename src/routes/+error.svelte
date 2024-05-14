@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 
 	const textMap: { [key: number]: string } = {
@@ -16,6 +17,6 @@
 			<p class="mt-2">{errorText}</p>
 		</div>
 
-		<a href="/" class="btn btn-primary">Take me home</a>
+		<a href={base} class="btn btn-primary">Take me home</a>
 	</div>
 </section>
