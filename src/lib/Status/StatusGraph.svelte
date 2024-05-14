@@ -23,7 +23,7 @@
 
 		const data = Object.entries(progressData);
 
-		const highlightFunction = <T>(
+		const highlightFunction = <T,>(
 			defaultValue: T,
 			highlightValue: T
 		): ((ctx: ScriptableContext<'line'>) => T) => {
@@ -39,15 +39,15 @@
 				data: data.map(([key, value]) => value),
 				yAxisID: 'y',
 				fill: true,
-				backgroundColor: `hsl(${primaryColor} / 10%)`,
-				borderColor: `hsl(${primaryColor} / 80%)`,
-				pointBackgroundColor: `hsl(${backgroundColor})`,
+				backgroundColor: `oklch(${primaryColor} / 10%)`,
+				borderColor: `oklch(${primaryColor} / 80%)`,
+				pointBackgroundColor: `oklch(${backgroundColor} / 100%)`,
 				pointStyle: 'circle',
 				pointBorderColor: highlightFunction(
-					`hsl(${baseContentColor} / 25%)`,
-					`hsl(${baseContentColor} / 50%)`
+					`oklch(${baseContentColor} / 25%)`,
+					`oklch(${baseContentColor} / 50%)`
 				),
-				pointHoverBorderColor: `hsl(${baseContentColor} / 100%)`,
+				pointHoverBorderColor: `oklch(${baseContentColor} / 100%)`,
 				pointBorderWidth: highlightFunction(2, 4),
 				pointHoverBorderWidth: highlightFunction(2, 4),
 				pointRadius: highlightFunction(6, 10),

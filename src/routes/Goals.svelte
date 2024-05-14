@@ -2,7 +2,8 @@
 	import { Card } from '$lib/Card';
 	import { RustIcon } from '$lib/Icon';
 	import Section from '$lib/Section/Section.svelte';
-	import { AppleShortcutsIcon, TestTubeIcon } from '@indaco/svelte-iconoir';
+	import { AppleShortcutsIcon } from '@indaco/svelte-iconoir/apple-shortcuts';
+	import { TestTubeIcon } from '@indaco/svelte-iconoir/test-tube';
 </script>
 
 <Section id="goals" title="Goals">
