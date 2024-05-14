@@ -3,7 +3,8 @@
 	import { Link, links } from '$lib/Link';
 	import { ThemeToggle } from '$lib/ThemeToggle';
 	import { scrolled } from '$lib/stores';
-	import { GitHubIcon, MenuIcon } from '@indaco/svelte-iconoir';
+	import { GitHubIcon } from '@indaco/svelte-iconoir/github';
+	import { MenuIcon } from '@indaco/svelte-iconoir/menu';
 	import { derived } from 'svelte/store';
 
 	$: navbarScrolled = derived(scrolled, (scrollY) => scrollY > 50);

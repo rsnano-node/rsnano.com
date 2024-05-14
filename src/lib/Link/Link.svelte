@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { LinkData } from '$lib/Link/links';
-	import { OpenNewWindowIcon } from '@indaco/svelte-iconoir';
+	import { OpenNewWindowIcon } from '@indaco/svelte-iconoir/open-new-window';
 	import { twMerge } from 'tailwind-merge';
 
 	export let data: LinkData;

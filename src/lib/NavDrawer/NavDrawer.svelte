@@ -1,19 +1,14 @@
 <script lang="ts">
-	import { ThemeToggle } from '$lib/ThemeToggle';
 	import { Link, links } from '$lib/Link';
-	import {
-		CancelIcon,
-		HomeIcon,
-		MultiplePagesIcon,
-		PrivacypolicyIcon
-	} from '@indaco/svelte-iconoir';
+	import { ThemeToggle } from '$lib/ThemeToggle';
+	import { XmarkIcon } from '@indaco/svelte-iconoir/xmark';
 </script>
 
 <div class="flex flex-col w-full min-h-full bg-base-200 p-4">
 	<div class="flex justify-between">
 		<ThemeToggle />
 		<label for="nav-drawer" class="drawer-button btn btn-ghost btn-square">
-			<CancelIcon />
+			<XmarkIcon />
 		</label>
 	</div>
 

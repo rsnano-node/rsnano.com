@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { themeData } from '$lib/stores';
-	import { HalfMoonIcon, SunLightIcon } from '@indaco/svelte-iconoir';
+	import { HalfMoonIcon } from '@indaco/svelte-iconoir/half-moon';
+	import { SunLightIcon } from '@indaco/svelte-iconoir/sun-light';
 	import { twMerge } from 'tailwind-merge';
 
 	let className: string | undefined = undefined;

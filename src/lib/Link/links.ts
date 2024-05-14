@@ -1,14 +1,14 @@
-import {
-	DatabaseMonitorIcon,
-	DiscordIcon,
-	GitHubIcon,
-	HomeIcon,
-	MultiplePagesIcon,
-	PrivacypolicyIcon,
-	TvIcon,
-	TwitterIcon,
-	YouTubeIcon
-} from '@indaco/svelte-iconoir';
+import { DatabaseMonitorIcon } from '@indaco/svelte-iconoir/database-monitor';
+import { DiscordIcon } from '@indaco/svelte-iconoir/discord';
+import { GitHubIcon } from '@indaco/svelte-iconoir/github';
+import { HomeIcon } from '@indaco/svelte-iconoir/home';
+import { MultiplePagesIcon } from '@indaco/svelte-iconoir/multiple-pages';
+import { PrivacyPolicyIcon } from '@indaco/svelte-iconoir/privacy-policy';
+import { TvIcon } from '@indaco/svelte-iconoir/tv';
+import { TwitterIcon } from '@indaco/svelte-iconoir/twitter';
+import { YouTubeIcon } from '@indaco/svelte-iconoir/youtube';
+
+
 
 export type LinkData = {
 	href: string;
@@ -20,7 +20,7 @@ export type LinkData = {
 export const links = {
 	home: { href: '/', external: false, title: 'Home', icon: HomeIcon },
 	blog: { href: '/blog', external: false, title: 'Blog', icon: MultiplePagesIcon },
-	privacy: { href: '/privacy', external: false, title: 'Legal & Privacy', icon: PrivacypolicyIcon },
+	privacy: { href: '/privacy', external: false, title: 'Legal & Privacy', icon: PrivacyPolicyIcon },
 	youtubePrivacy: {
 		href: 'https://policies.google.com/privacy',
 		external: true,
