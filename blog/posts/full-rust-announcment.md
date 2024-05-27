@@ -1,5 +1,5 @@
 ---
-title: 'This month in RsNano 12/2022'
+title: '100% Rust Node'
 date: 2024-05-27T12:00:00+01:00
 draft: false
 ---
@@ -7,7 +7,10 @@ draft: false
 ## A working Nano node written in 100% Rust
 
 Yes, you read that right. Last Friday I ran a 100% Rust nano node for the first time. It took more than 2000 hours of work to reach that goal and it was lots of fun! I've been incrementally porting the codebase from C++ to Rust for over 2 years. Then the moment came where the last bits of the nano node code were moved over to Rust and I was done. It was very exciting to reach that goal and to run the Rust node for the very first time. This is how it looked:
-![Video of RsNano node](/blog/rsnano-node-starting.webm)
+<video controls>
+  <source src="/blog/rsnano-node-starting.webm" type="video/webm">
+    Video of RsNano node
+</video>
 
 This is a huge milestone, but don't get too excited yet. There are still some limitations, that need to be worked on. Firstly, the main function that runs the node is just a quick and dirty prototype. It doesn't parse command line arguments and doesn't read config files. Also there is no RPC or IPC server support and no work generation with OpenCL or with an external work server (but CPU work generation is possible). 
 
@@ -23,5 +26,5 @@ Let's celebrate this milestone on Tuesday May 27 on YouTube and on Twitch. I'm g
 ## Join Us
 
 Join our [Discord server](https://discord.gg/kBwvAyxEWE) to get the latest news, or if you want to contribute to RsNano.
-Want to get involved? [We love contributions](https://rsnano.com/#community)
+Want to get involved? [We love contributions](https://rsnano.com/#contribute)
 
