@@ -12,7 +12,7 @@
 	<div class="w-full gridish lg:flex-nowrap max-lg:gap-0 pt-8">
 		<div class="basis-1/4 text-center shrink">
 			<h2 class="my-0 text-nowrap">
-				<span class="text-6xl text-primary mr-0">{currentProgress[1].toFixed(0)}</span><span
+				<span class="text-6xl text-primary mr-0">{Math.floor(currentProgress[1])}</span><span
 					class="text-3xl text-primary"
 				>
 					.{(currentProgress[1] % 1).toFixed(2).substring(2)}
