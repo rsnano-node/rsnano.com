@@ -11,7 +11,7 @@
 		<Card title="100% Rust">
 			<RustIcon slot="icon" class="w-32 h-32" />
 			<p>
-				Currently, about 40% of the code base is ported. Our goal is to port 100% of the C++ code to
+				Currently, about 60% of the code base is ported. Our goal is to port 100% of the C++ code to
 				Rust.
 			</p>
 		</Card>
