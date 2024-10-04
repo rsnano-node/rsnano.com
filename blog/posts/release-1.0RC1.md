@@ -32,13 +32,17 @@ The official docker image is: **simpago/rsnano:V1.0RC1**
 
 You can run a beta node with:
 
-    docker run -d --name rsnano -p 54000:54000 -v ~/NanoBeta:/root/NanoBeta simpago/rsnano:V1.0RC1 nano_node daemon --network=beta
+```bash
+docker run -d --name rsnano -p 54000:54000 -v ~/NanoBeta:/root/NanoBeta simpago/rsnano:V1.0RC1 nano_node daemon --network=beta
+```
 
 You can run a live node with:
 
-    docker run -d --name rsnano -p 7075:7075 -v ~/Nano:/root/Nano simpago/rsnano:V1.0RC1 nano_node daemon --network=live
+```bash
+docker run -d --name rsnano -p 7075:7075 -v ~/Nano:/root/Nano simpago/rsnano:V1.0RC1 nano_node daemon --network=live
+```
 
-Or you can compile it yourself. See the [github readme](https://github.com/rsnano-node/rsnano-node) for instructions.
+Or you can compile it yourself. See the [Github readme](https://github.com/rsnano-node/rsnano-node) for instructions.
 
 As a tester, please join our [Discord server](https://discord.gg/kBwvAyxEWE) and share your feedback there.
 
