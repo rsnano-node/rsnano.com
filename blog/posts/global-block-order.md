@@ -61,12 +61,14 @@ Nano follows the excellent principle of **"no magic numbers"**. Magic numbers li
 
 We could introduce a new message that lets nodes vote on the current epoch:
 
-    struct VoteCurrentEpoch {
-	    voting_account: Account,
-	    timestamp: u64,
-	    epoch: u32,
-	    signature: Signature
-    }
+```
+struct VoteCurrentEpoch {
+    voting_account: Account,
+    timestamp: u64,
+    epoch: u32,
+    signature: Signature
+}
+```
 
 Nodes would periodically vote on the current epoch. Every node operator can set their preferred epoch size in the node configuration file. Once 66% of the online vote weight votes for a new epoch, the new epoch begins.
 ### Adding the epoch to ConfirmAck
@@ -74,14 +76,16 @@ All nodes have to agree which blocks belong into which epoch. So we have to exte
 ### Confirming an epoch
 When an epoch ends, nodes have to vote on the epoch hash. The epoch hash would be a hash of all ordered block hashes. The message could look like this:
 
-    struct VoteEpochConfirm {
-	    voting_account: Account,  
-	    timestamp: u64,  
-	    epoch: u32,
-	    epoch_hash: BlockHash,
-	    previous_epoch_hash: BlockHash,
-	    signature: Signature
-    }
+```
+struct VoteEpochConfirm {
+    voting_account: Account,  
+    timestamp: u64,  
+    epoch: u32,
+    epoch_hash: BlockHash,
+    previous_epoch_hash: BlockHash,
+    signature: Signature
+}
+```
 Because it is globally agreed on, which block are in the epoch, all nodes would eventually get the same epoch hash. If a node misses a block, it would eventually receive it via the existing bootstrap strategies and can then eventually confirm the epoch.
 
 ### Starting the epoch system with a canary block
