@@ -38,7 +38,9 @@ RsNano V1.0 is **compatible with nano_node V28.1**, but it only supports LMDB as
 
 For running it with docker, just execute:
 
-     docker run -p 7075:7075 -v ~/Nano:/root/Nano simpago/rsnano:V1.0 --network=live node run
+```
+docker run -p 7075:7075 -v ~/Nano:/root/Nano simpago/rsnano:V1.0 --network=live node run
+```
 
 More options for building or running the node can be found in the [README](https://github.com/rsnano-node/rsnano-node/tree/releases/v1)
 
