@@ -61,7 +61,3 @@ Special thanks to
 RsNano V1.0 marks a major milestone, but the journey continues. We’re excited to keep improving the node, welcoming new contributors, and strengthening the Nano network.
 
 Get involved, try RsNano V1.0, join the [RsNano Discord server](https://discord.gg/kBwvAyxEWE) and join us in building Nano's future! 🚀
-
-Gustav
-Lead Developer, RsNano
-
